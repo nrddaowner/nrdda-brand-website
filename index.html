@@ -2,1181 +2,231 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NRDDA | Dipak Chouhan — Java Full Stack & AI Engineer</title>
-<meta name="description" content="NRDDA is Dipak Chouhan: Java full stack and AI engineer in Hyderabad. Spring microservices, GenAI, and five shipped web and Android products.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>NRDDA Tech · Apps by Dipak Chouhan</title>
+<meta name="description" content="NRDDA Tech is Dipak Chouhan, a Java full stack and AI engineer in Hyderabad. Five web and Android apps, from Slide Out to HisaabKiKitaab, all still maintained.">
 <meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="https://nrdda.com/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NRDDA Tech · Apps by Dipak Chouhan">
+<meta property="og:description" content="Apps people use every day, built and run by one engineer in Hyderabad.">
+<meta property="og:url" content="https://nrdda.com/">
+<meta property="og:image" content="https://nrdda.com/assets/slide-out/feature.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
-
-<style>
-/* ============================================================
-   NRDDA — light, tactile, Nunito.
-   Everything sits on a physical surface: cards have a thick
-   bottom edge, buttons have a solid under-shadow you press into.
-   ============================================================ */
-
-:root {
-  /* brand */
-  --indigo:        #4F46E5;
-  --indigo-edge:   #3730A3;
-  --indigo-tint:   #EEEDFD;
-
-  --sky:           #0EA5E9;
-  --sky-edge:      #0369A1;
-  --sky-tint:      #E0F2FE;
-
-  --grass:         #58CC02;
-  --grass-edge:    #43A302;
-  --grass-tint:    #EBFADD;
-
-  --grape:         #9333EA;
-  --grape-edge:    #6B21A8;
-  --grape-tint:    #F5E9FE;
-
-  --coral:         #F97316;
-  --coral-edge:    #C2410C;
-  --coral-tint:    #FFF0E4;
-
-  /* surface */
-  --page:          #FFFFFF;
-  --band:          #F6F8FC;
-  --card:          #FFFFFF;
-  --line:          #E3E8F0;
-  --line-strong:   #CBD5E1;
-
-  /* type */
-  --ink:           #1B2333;
-  --ink-soft:      #5A6781;
-  --ink-faint:     #8A94A8;
-
-  --r-lg: 20px;
-  --r-md: 16px;
-  --r-sm: 12px;
-  --r-pill: 999px;
-
-  --gutter: clamp(1.1rem, 4vw, 2.5rem);
-  --measure: 1140px;
-
-  --lift: 4px;   /* how deep a tactile element sits */
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: 'Nunito', system-ui, sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.7;
-  color: var(--ink);
-  background: var(--page);
-  -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: transparent;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-img, svg { max-width: 100%; display: block; }
-
-::selection { background: var(--indigo); color: #fff; }
-
-:focus-visible {
-  outline: 3px solid var(--indigo);
-  outline-offset: 3px;
-  border-radius: 6px;
-}
-
-.sr-only {
-  position: absolute; width: 1px; height: 1px;
-  margin: -1px; padding: 0; overflow: hidden;
-  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
-}
-
-.skip-link {
-  position: absolute; left: 50%; top: -120px; transform: translateX(-50%);
-  z-index: 3000; background: var(--indigo); color: #fff;
-  font-weight: 800; font-size: .9rem;
-  padding: .75rem 1.4rem; border-radius: 0 0 var(--r-md) var(--r-md);
-  text-decoration: none;
-}
-.skip-link:focus { top: 0; }
-
-/* ---------- type scale: hierarchy comes from contrast, not from
-             setting everything to weight 800 ---------- */
-
-h1, h2, h3, h4 { font-weight: 900; line-height: 1.15; letter-spacing: -0.02em; }
-
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: .45rem;
-  font-size: .75rem;
-  font-weight: 900;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--indigo);
-  background: var(--indigo-tint);
-  padding: .35rem .8rem;
-  border-radius: var(--r-pill);
-}
-.eyebrow--sky   { color: var(--sky-edge);   background: var(--sky-tint); }
-.eyebrow--grass { color: var(--grass-edge); background: var(--grass-tint); }
-.eyebrow--grape { color: var(--grape-edge); background: var(--grape-tint); }
-
-.lede {
-  font-size: clamp(1.05rem, 1.7vw, 1.2rem);
-  font-weight: 600;
-  color: var(--ink-soft);
-}
-
-p { color: var(--ink-soft); }
-p strong, li strong { color: var(--ink); font-weight: 800; }
-
-/* ---------- tactile buttons ---------- */
-
-.btn {
-  --btn-bg: var(--indigo);
-  --btn-edge: var(--indigo-edge);
-  --btn-fg: #ffffff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: .5rem;
-  padding: .85rem 1.6rem;
-  font-family: inherit;
-  font-size: .92rem;
-  font-weight: 900;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--btn-fg);
-  background: var(--btn-bg);
-  border: none;
-  border-radius: var(--r-md);
-  box-shadow: 0 var(--lift) 0 var(--btn-edge);
-  cursor: pointer;
-  user-select: none;
-  transition: filter .15s ease, transform .06s ease, box-shadow .06s ease;
-}
-.btn:hover { filter: brightness(1.07); }
-.btn:active {
-  transform: translateY(var(--lift));
-  box-shadow: 0 0 0 var(--btn-edge);
-}
-
-.btn--sky   { --btn-bg: var(--sky);   --btn-edge: var(--sky-edge); }
-.btn--grass { --btn-bg: var(--grass); --btn-edge: var(--grass-edge); }
-.btn--grape { --btn-bg: var(--grape); --btn-edge: var(--grape-edge); }
-
-.btn--soft {
-  --btn-bg: #ffffff;
-  --btn-edge: var(--line-strong);
-  --btn-fg: var(--ink);
-  border: 2px solid var(--line);
-}
-.btn--soft:hover { filter: none; background: var(--band); }
-
-.btn--full { width: 100%; }
-.btn--sm { padding: .7rem 1.1rem; font-size: .8rem; }
-
-/* ---------- tactile card ---------- */
-
-.card {
-  background: var(--card);
-  border: 2px solid var(--line);
-  border-bottom-width: 5px;
-  border-radius: var(--r-lg);
-  padding: 1.6rem;
-}
-
-.card--accent { border-bottom-color: var(--accent, var(--line)); }
-
-.card--tap {
-  transition: transform .16s ease, border-color .16s ease;
-}
-.card--tap:hover {
-  transform: translateY(-3px);
-  border-bottom-width: 5px;
-  border-color: var(--line-strong);
-}
-.card--tap.card--accent:hover { border-bottom-color: var(--accent); }
-
-/* ---------- layout ---------- */
-
-.shell { max-width: var(--measure); margin: 0 auto; padding: 0 var(--gutter); }
-
-.band { padding-block: clamp(3rem, 7vw, 5rem); }
-.band--fill { background: var(--band); border-block: 2px solid var(--line); }
-
-.view { display: none; }
-.view.is-active { display: block; }
-.view.is-entering { animation: enter .32s cubic-bezier(.16,1,.3,1) both; }
-@keyframes enter {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: none; }
-}
-
-/* ---------- top bar ---------- */
-
-.topbar {
-  position: sticky; top: 0; z-index: 900;
-  background: rgba(255,255,255,.92);
-  backdrop-filter: blur(10px);
-  border-bottom: 2px solid var(--line);
-}
-.topbar__inner {
-  max-width: var(--measure);
-  margin: 0 auto;
-  padding: .7rem var(--gutter);
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.brand {
-  display: inline-flex; align-items: center; gap: .5rem;
-  background: none; border: 0; padding: 0; cursor: pointer;
-  font-size: 1.45rem; font-weight: 900; letter-spacing: -0.01em;
-  color: var(--indigo);
-  margin-right: auto;
-}
-.brand__bolt {
-  display: grid; place-items: center;
-  width: 32px; height: 32px;
-  border-radius: 10px;
-  background: var(--indigo);
-  box-shadow: 0 3px 0 var(--indigo-edge);
-  font-size: 1rem;
-}
-
-.navlinks { display: flex; align-items: center; gap: .2rem; list-style: none; }
-
-.navlink {
-  background: none; border: 0; cursor: pointer;
-  font-family: inherit; font-size: .95rem; font-weight: 800;
-  color: var(--ink-soft);
-  padding: .55rem .85rem;
-  border-radius: var(--r-sm);
-  transition: color .15s ease, background-color .15s ease;
-}
-.navlink:hover { color: var(--indigo); background: var(--indigo-tint); }
-.navlink[aria-current="page"] { color: var(--indigo); background: var(--indigo-tint); }
-
-.navtoggle { display: none; }
-
-/* ---------- hero ---------- */
-
-.hero {
-  display: grid;
-  grid-template-columns: 1.15fr .85fr;
-  gap: clamp(1.75rem, 4vw, 3.5rem);
-  align-items: center;
-  padding-block: clamp(2.5rem, 6vw, 4.25rem);
-}
-
-.hero__title {
-  font-size: clamp(2.1rem, 5.2vw, 3.35rem);
-  margin: 1rem 0 0;
-  text-wrap: balance;
-}
-.hero__title span { color: var(--indigo); }
-
-.hero__lede { margin-top: 1.1rem; max-width: 50ch; }
-
-.hero__actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.9rem; }
-
-.hero__card { --accent: var(--indigo-edge); text-align: left; }
-.hero__card h2 { font-size: 1.55rem; margin: .9rem 0 .5rem; }
-.hero__card p { font-size: .97rem; }
-
-.roster { list-style: none; margin: 1.2rem 0; display: grid; gap: .5rem; }
-.roster li {
-  display: flex; align-items: center; gap: .6rem;
-  font-size: .93rem; font-weight: 700; color: var(--ink);
-  background: var(--band);
-  border: 2px solid var(--line);
-  border-radius: var(--r-sm);
-  padding: .5rem .75rem;
-}
-.roster .pip {
-  width: 9px; height: 9px; border-radius: 50%;
-  background: var(--grass);
-  box-shadow: 0 0 0 3px var(--grass-tint);
-  flex: none;
-}
-.roster .plat {
-  margin-left: auto; font-size: .7rem; font-weight: 900;
-  letter-spacing: .06em; text-transform: uppercase; color: var(--ink-faint);
-}
-
-/* ---------- stats ---------- */
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-}
-.stat { text-align: center; padding: 1.25rem 1rem; }
-.stat__n {
-  font-size: 2.1rem; font-weight: 900; line-height: 1;
-  color: var(--stat, var(--indigo));
-}
-.stat__n--word { font-size: 1.5rem; padding-block: .3rem; }
-.stat__l {
-  margin-top: .45rem;
-  font-size: .82rem; font-weight: 800; color: var(--ink-soft);
-  letter-spacing: .02em;
-}
-
-/* ---------- section heads ---------- */
-
-.head { max-width: 62ch; margin-bottom: 2rem; }
-.head--center { margin-inline: auto; text-align: center; }
-.head--center .eyebrow { margin-inline: auto; }
-.head__title { font-size: clamp(1.7rem, 3.6vw, 2.4rem); margin-top: .9rem; text-wrap: balance; }
-.head__note { margin-top: .7rem; font-size: 1.05rem; font-weight: 600; }
-
-/* ---------- skill groups ---------- */
-
-.cols {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-  gap: 1.25rem;
-}
-
-.group__icon {
-  display: grid; place-items: center;
-  width: 48px; height: 48px;
-  border-radius: 14px;
-  font-size: 1.4rem;
-  background: var(--tint, var(--indigo-tint));
-  box-shadow: 0 3px 0 var(--edge, var(--line-strong));
-}
-.group h3 { font-size: 1.2rem; margin: .95rem 0 .35rem; }
-.group p { font-size: .93rem; line-height: 1.6; }
-
-.chips { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: 1.1rem; }
-.chip {
-  font-size: .82rem; font-weight: 800; color: var(--ink);
-  background: var(--band);
-  border: 2px solid var(--line);
-  border-radius: var(--r-sm);
-  padding: .3rem .65rem;
-}
-
-/* ---------- filters ---------- */
-
-.filters {
-  display: flex; justify-content: space-between; align-items: center;
-  gap: 1rem; flex-wrap: wrap; margin-bottom: 1.75rem;
-}
-.tabs { display: flex; flex-wrap: wrap; gap: .5rem; }
-
-.tab {
-  font-family: inherit; font-size: .88rem; font-weight: 800;
-  color: var(--ink-soft);
-  background: #fff;
-  border: 2px solid var(--line);
-  border-bottom-width: 4px;
-  border-radius: var(--r-sm);
-  padding: .5rem .95rem;
-  cursor: pointer;
-  transition: color .15s ease, border-color .15s ease, transform .06s ease, box-shadow .06s ease;
-}
-/* hover must NOT look like the selected state */
-.tab:hover { color: var(--sky-edge); border-color: var(--line-strong); }
-.tab:active { transform: translateY(2px); border-bottom-width: 2px; }
-.tab[aria-pressed="true"] {
-  color: #fff;
-  background: var(--sky);
-  border-color: var(--sky);
-  border-bottom-color: var(--sky-edge);
-}
-.tab__n {
-  display: inline-block; margin-left: .4rem;
-  font-size: .75rem; opacity: .65;
-}
-
-.search { position: relative; flex: 0 1 280px; }
-.search__field {
-  width: 100%;
-  font-family: inherit; font-size: .95rem; font-weight: 600;
-  color: var(--ink);
-  background: #fff;
-  border: 2px solid var(--line);
-  border-bottom-width: 4px;
-  border-radius: var(--r-sm);
-  padding: .6rem .9rem .6rem 2.4rem;
-  outline: none;
-  transition: border-color .15s ease;
-}
-.search__field::placeholder { color: var(--ink-faint); font-weight: 600; }
-.search__field:focus { border-color: var(--sky); }
-.search__glyph {
-  position: absolute; left: .8rem; top: 50%; transform: translateY(-50%);
-  font-size: .95rem; pointer-events: none;
-}
-
-/* ---------- product grid ---------- */
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.25rem;
-}
-
-.product { display: flex; flex-direction: column; gap: .85rem; }
-.product__icon {
-  display: grid; place-items: center;
-  width: 56px; height: 56px;
-  border-radius: 16px;
-  font-size: 1.7rem;
-  background: var(--tint);
-  box-shadow: 0 3px 0 var(--accent);
-}
-.product h3 { font-size: 1.3rem; }
-.product p { font-size: .93rem; line-height: 1.6; }
-.product__actions { display: grid; gap: .55rem; margin-top: auto; padding-top: .35rem; }
-
-.plats { display: flex; flex-wrap: wrap; gap: .35rem; }
-.plat-tag {
-  font-size: .7rem; font-weight: 900; letter-spacing: .07em; text-transform: uppercase;
-  padding: .22rem .55rem; border-radius: var(--r-sm);
-}
-.plat-web     { background: var(--sky-tint);   color: var(--sky-edge); }
-.plat-android { background: var(--grass-tint); color: var(--grass-edge); }
-
-.empty {
-  grid-column: 1 / -1;
-  text-align: center;
-  padding: 3rem 1.5rem;
-  border: 2px dashed var(--line-strong);
-  border-radius: var(--r-lg);
-  background: var(--band);
-}
-.empty__emoji { font-size: 2.2rem; }
-.empty h3 { font-size: 1.2rem; margin: .6rem 0 .3rem; }
-.empty p { font-size: .95rem; }
-
-/* ---------- FAQ ---------- */
-
-.faq { display: grid; gap: .75rem; max-width: 780px; margin-inline: auto; }
-
-.qa {
-  background: #fff;
-  border: 2px solid var(--line);
-  border-bottom-width: 5px;
-  border-radius: var(--r-lg);
-  overflow: hidden;
-}
-.qa__q {
-  display: flex; align-items: center; gap: 1rem;
-  padding: 1.1rem 1.35rem;
-  font-size: 1.03rem; font-weight: 800; line-height: 1.4;
-  cursor: pointer; list-style: none;
-}
-.qa__q::-webkit-details-marker { display: none; }
-.qa__q:hover { color: var(--indigo); }
-.qa__sign {
-  margin-left: auto; flex: none;
-  display: grid; place-items: center;
-  width: 26px; height: 26px; border-radius: 9px;
-  background: var(--indigo-tint); color: var(--indigo);
-  font-weight: 900; font-size: 1.05rem; line-height: 1;
-  transition: transform .2s ease;
-}
-.qa[open] .qa__sign { transform: rotate(45deg); }
-.qa__a { padding: 0 1.35rem 1.25rem; font-size: .97rem; }
-
-/* ---------- forms ---------- */
-
-.field { margin-bottom: 1.1rem; }
-.field > label {
-  display: block; margin-bottom: .4rem;
-  font-size: .88rem; font-weight: 800; color: var(--ink);
-}
-.field__hint { font-size: .82rem; font-weight: 600; color: var(--ink-faint); }
-
-.control {
-  width: 100%;
-  font-family: inherit; font-size: .97rem; font-weight: 600;
-  color: var(--ink);
-  background: #fff;
-  border: 2px solid var(--line);
-  border-bottom-width: 4px;
-  border-radius: var(--r-md);
-  padding: .8rem 1rem;
-  outline: none;
-  transition: border-color .15s ease, box-shadow .15s ease;
-}
-.control::placeholder { color: var(--ink-faint); font-weight: 600; }
-.control:focus { border-color: var(--sky); box-shadow: 0 0 0 4px var(--sky-tint); }
-.control:user-invalid { border-color: #EF4444; }
-textarea.control { resize: vertical; min-height: 120px; line-height: 1.6; }
-select.control {
-  appearance: none; cursor: pointer; padding-right: 2.6rem;
-  background-image:
-    linear-gradient(45deg, transparent 50%, var(--ink-soft) 50%),
-    linear-gradient(135deg, var(--ink-soft) 50%, transparent 50%);
-  background-size: 7px 7px, 7px 7px;
-  background-position: calc(100% - 1.5rem) 1.25rem, calc(100% - 1rem) 1.25rem;
-  background-repeat: no-repeat;
-}
-
-.duo {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.25rem;
-  align-items: start;
-}
-
-.deets { display: grid; gap: .5rem; margin-top: 1.25rem; }
-.deet {
-  display: flex; align-items: center; flex-wrap: wrap; gap: .35rem .7rem;
-  background: var(--band);
-  border: 2px solid var(--line);
-  border-radius: var(--r-sm);
-  padding: .65rem .85rem;
-  font-size: .94rem; font-weight: 700;
-  word-break: break-word;
-}
-.deet__k { color: var(--ink-faint); font-weight: 800; }
-.deet a { color: var(--indigo); font-weight: 800; }
-
-/* ---------- toasts ---------- */
-
-#toasts {
-  position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 2000;
-  display: flex; flex-direction: column; gap: .6rem;
-  max-width: calc(100vw - 2.5rem);
-}
-.toast {
-  display: flex; align-items: center; gap: .7rem;
-  background: #fff;
-  border: 2px solid var(--line);
-  border-bottom-width: 5px;
-  border-bottom-color: var(--grass-edge);
-  border-radius: var(--r-md);
-  padding: .85rem 1.1rem;
-  font-size: .94rem; font-weight: 700; color: var(--ink);
-  box-shadow: 0 10px 26px rgba(27,35,51,.12);
-  animation: toast-in .28s cubic-bezier(.16,1,.3,1) both;
-  transition: opacity .28s ease, transform .28s ease;
-}
-.toast__mark {
-  display: grid; place-items: center; flex: none;
-  width: 26px; height: 26px; border-radius: 50%;
-  background: var(--grass-tint); font-size: .9rem;
-}
-.toast.is-leaving { opacity: 0; transform: translateX(16px); }
-@keyframes toast-in {
-  from { opacity: 0; transform: translateX(24px); }
-  to   { opacity: 1; transform: none; }
-}
-
-/* ---------- footer ---------- */
-
-.foot {
-  margin-top: auto;
-  background: var(--band);
-  border-top: 2px solid var(--line);
-  padding-block: 2.5rem;
-}
-.foot__inner {
-  max-width: var(--measure); margin: 0 auto; padding: 0 var(--gutter);
-  display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between;
-}
-.foot__brand { font-size: 1.35rem; font-weight: 900; color: var(--indigo); }
-.foot__note { font-size: .93rem; margin-top: .3rem; }
-.foot__col { display: grid; gap: .4rem; align-content: start; font-size: .93rem; }
-.foot__col h4 { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint); }
-.foot__col a, .foot__link {
-  background: none; border: 0; padding: 0; text-align: left;
-  font-family: inherit; font-size: .93rem; font-weight: 700;
-  color: var(--ink-soft); text-decoration: none; cursor: pointer;
-}
-.foot__col a:hover, .foot__link:hover { color: var(--indigo); }
-.foot__legal {
-  max-width: var(--measure); margin: 2rem auto 0;
-  padding: 1.25rem var(--gutter) 0;
-  border-top: 2px solid var(--line);
-  font-size: .85rem; font-weight: 600; color: var(--ink-faint);
-}
-
-/* ---------- responsive ---------- */
-
-@media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; }
-  .stats { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 760px) {
-  .navtoggle {
-    display: grid; place-items: center;
-    width: 44px; height: 44px;
-    background: #fff; color: var(--ink);
-    border: 2px solid var(--line); border-bottom-width: 4px;
-    border-radius: var(--r-sm);
-    font-size: 1.2rem; cursor: pointer;
-  }
-  .topbar__inner { flex-wrap: wrap; }
-  .topbar .btn { display: none; }
-  nav.mainnav { order: 3; width: 100%; }
-  .navlinks {
-    display: none;
-    flex-direction: column;
-    align-items: stretch;
-    gap: .25rem;
-    padding: .5rem 0 .35rem;
-    border-top: 2px solid var(--line);
-  }
-  .navlinks.is-open { display: flex; }
-  .navlink { padding: .7rem .85rem; font-size: 1rem; }
-}
-
-@media (max-width: 560px) {
-  .stats { grid-template-columns: 1fr; }
-  .filters { align-items: stretch; }
-  .search { flex: 1 1 100%; }
-  .tabs { gap: .4rem; }
-  .hero__actions .btn { flex: 1 1 100%; }
-  #toasts { left: 1rem; right: 1rem; bottom: 1rem; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after {
-    animation-duration: .01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: .01ms !important;
-  }
-  .card--tap:hover { transform: none; }
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<a class="skip-link" href="#main">Skip to content</a>
-<div id="toasts" aria-live="polite"></div>
-
-<!-- ================= TOP BAR ================= -->
-<header class="topbar">
-  <div class="topbar__inner">
-    <button class="brand" type="button" data-go="home" aria-label="NRDDA — home">
-      <span class="brand__bolt" aria-hidden="true">⚡</span>
-      <span>NRDDA</span>
-    </button>
-
-    <nav class="mainnav" aria-label="Primary">
-      <ul class="navlinks" id="navlinks">
-        <li><button class="navlink" type="button" data-go="home" aria-current="page">Home</button></li>
-        <li><button class="navlink" type="button" data-go="products">Products</button></li>
-        <li><button class="navlink" type="button" data-go="support">Support</button></li>
-        <li><button class="navlink" type="button" data-go="contact">Contact</button></li>
-      </ul>
+<header class="site-head">
+  <div class="wrap">
+    <a class="wordmark wordmark--sm" href="#top" aria-label="NRDDA home">nrdda<span>.</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#apps">Apps</a>
+      <a href="#work">Engineering</a>
+      <a href="#support">Support</a>
+      <a class="btn btn--ink btn--sm" href="#contact">Start a project</a>
     </nav>
-
-    <button class="navtoggle" type="button" id="navtoggle"
-            aria-expanded="false" aria-controls="navlinks" aria-label="Open menu">☰</button>
-
-    <button class="btn btn--sm" type="button" data-go="contact">Get in touch</button>
   </div>
 </header>
 
-<div id="main">
+<main id="main">
 
-<!-- ================= HOME ================= -->
-<main id="view-home" class="view is-active" tabindex="-1">
-
-  <section class="shell hero">
-    <div>
-      <p class="eyebrow">👋 Hyderabad, India</p>
-      <h1 class="hero__title">Hi, I'm Dipak Chouhan. I build the backend — then the <span>product</span> on top of it.</h1>
-      <p class="lede hero__lede">
-        Java full stack and AI engineer, eight years in. NRDDA is where the enterprise work meets
-        the shipped work: Spring microservices and GenAI underneath, five web and Android
-        products out in the world.
-      </p>
-      <div class="hero__actions">
-        <button class="btn btn--sky" type="button" data-go="products">Explore products 🚀</button>
-        <button class="btn btn--soft" type="button" data-go="contact">Let's collaborate 🤝</button>
-      </div>
-    </div>
-
-    <div class="card card--accent hero__card">
-      <span class="eyebrow eyebrow--sky">Oracle certified</span>
-      <h2>NRDDA Tech</h2>
-      <p>Smart AI systems, fun mobile apps, and enterprise microservice engines — all shipped and maintained by one person.</p>
-      <ul class="roster" id="roster"></ul>
-      <button class="btn btn--full" type="button" data-go="contact">Connect now</button>
-    </div>
-  </section>
-
-  <section class="shell" style="padding-bottom: clamp(2.5rem, 6vw, 4rem);">
-    <div class="stats">
-      <div class="card stat"><div class="stat__n">8+</div><div class="stat__l">Years experience</div></div>
-      <div class="card stat" style="--stat: var(--sky)"><div class="stat__n" id="stat-products">5</div><div class="stat__l">Products live</div></div>
-      <div class="card stat" style="--stat: var(--grass)"><div class="stat__n">2</div><div class="stat__l">Platforms shipped</div></div>
-      <div class="card stat" style="--stat: var(--grape)"><div class="stat__n stat__n--word">Oracle</div><div class="stat__l">Certified professional</div></div>
-    </div>
-  </section>
-
-  <section class="band band--fill">
-    <div class="shell">
-      <div class="head head--center">
-        <span class="eyebrow eyebrow--grape">The stack</span>
-        <h2 class="head__title">Three layers, one person maintaining all of them</h2>
-        <p class="head__note">Nothing here is résumé decoration — each group is the toolset behind something that's currently running.</p>
-      </div>
-
-      <div class="cols">
-        <div class="card group">
-          <div class="group__icon" style="--tint: var(--indigo-tint); --edge: var(--indigo)" aria-hidden="true">⚙️</div>
-          <h3>Backend &amp; microservices</h3>
-          <p>Domain services, event flow, and the schema discipline that keeps releases boring.</p>
-          <div class="chips">
-            <span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">Spring JPA</span>
-            <span class="chip">Microservices</span><span class="chip">Kafka</span><span class="chip">REST APIs</span>
-            <span class="chip">Oracle SQL</span><span class="chip">Flyway</span><span class="chip">Redis</span>
-          </div>
-        </div>
-
-        <div class="card group">
-          <div class="group__icon" style="--tint: var(--grape-tint); --edge: var(--grape)" aria-hidden="true">🧠</div>
-          <h3>AI, GenAI &amp; mobile</h3>
-          <p>Retrieval and model orchestration on the server, delivered through native Android.</p>
-          <div class="chips">
-            <span class="chip">Android</span><span class="chip">GenAI</span><span class="chip">LangChain</span>
-            <span class="chip">RAG architecture</span><span class="chip">Gemini API</span><span class="chip">Claude</span>
-            <span class="chip">GitHub Copilot</span>
-          </div>
-        </div>
-
-        <div class="card group">
-          <div class="group__icon" style="--tint: var(--coral-tint); --edge: var(--coral)" aria-hidden="true">🚀</div>
-          <h3>Frontend &amp; DevOps</h3>
-          <p>The surface people actually touch, and the pipeline that gets it there.</p>
-          <div class="chips">
-            <span class="chip">Angular</span><span class="chip">ReactJS</span><span class="chip">Bootstrap</span>
-            <span class="chip">AWS</span><span class="chip">Docker</span><span class="chip">Git</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<!-- ================= PRODUCTS ================= -->
-<main id="view-products" class="view" tabindex="-1">
-  <section class="shell band">
-    <div class="head head--center">
-      <span class="eyebrow eyebrow--sky">Products</span>
-      <h2 class="head__title">Five products, two platforms, all still maintained</h2>
-      <p class="head__note">Filter by what they do, or search by name and description.</p>
-    </div>
-
-    <div class="filters">
-      <div class="tabs" id="tabs" role="group" aria-label="Filter products by category"></div>
-      <div class="search">
-        <span class="search__glyph" aria-hidden="true">🔍</span>
-        <label class="sr-only" for="search-input">Search products</label>
-        <input id="search-input" class="search__field" type="search" placeholder="Search products…" autocomplete="off">
-      </div>
-    </div>
-
-    <div class="grid" id="products-grid" aria-live="polite"></div>
-  </section>
-</main>
-
-<!-- ================= SUPPORT ================= -->
-<main id="view-support" class="view" tabindex="-1">
-  <section class="shell band">
-    <div class="head head--center">
-      <span class="eyebrow eyebrow--grass">Support</span>
-      <h2 class="head__title">Something broken? It reaches me, not a queue</h2>
-      <p class="head__note">Common answers first. If yours isn't here, file a ticket below.</p>
-    </div>
-
-    <div class="faq">
-      <details class="qa">
-        <summary class="qa__q">How do I report a bug in NEET AI, Detective IRA, or HisaabKiKitaab?<span class="qa__sign" aria-hidden="true">+</span></summary>
-        <div class="qa__a"><p>File a ticket with the form below, or email <strong>nrdda.owner@gmail.com</strong> directly. Include the product name and what you did right before it broke.</p></div>
-      </details>
-      <details class="qa">
-        <summary class="qa__q">Is my data secure in HisaabKiKitaab?<span class="qa__sign" aria-hidden="true">+</span></summary>
-        <div class="qa__a"><p>Your ledger is stored <strong>on your device first</strong>, so the app works with no signal. While you're signed in it also syncs to a <strong>private cloud backup under your own account</strong>, so a lost phone doesn't mean a lost year of records. Nobody else can read it, it's never sold, and the app has <strong>no access to your bank, SMS, or card details</strong> — every entry is one you typed. Full detail in the <a href="privacy/hisaabkikitaab.html">HisaabKiKitaab privacy policy</a>.</p></div>
-      </details>
-      <details class="qa">
-        <summary class="qa__q">Which products run in a browser?<span class="qa__sign" aria-hidden="true">+</span></summary>
-        <div class="qa__a"><p><strong>NEET AI</strong> runs on the web and on Android. HisaabKiKitaab, Detective IRA, and IRA Ball Sort are Android only.</p></div>
-      </details>
-    </div>
-
-    <div class="card card--accent" style="--accent: var(--grape-edge); max-width: 780px; margin: 2.25rem auto 0;">
-      <span class="eyebrow eyebrow--grape">New ticket</span>
-      <h3 style="font-size: 1.4rem; margin: .9rem 0 1.25rem;">Tell me what went wrong</h3>
-      <form id="support-form" novalidate>
-        <div class="field">
-          <label for="s-product">Product</label>
-          <select id="s-product" class="control" required>
-            <option value="">Choose a product…</option>
-            <option value="neet-ai">NEET AI</option>
-            <option value="hisaabkikitaab">HisaabKiKitaab</option>
-            <option value="detective-ira">Detective IRA</option>
-            <option value="ball-sort">IRA Ball Sort</option>
-            <option value="slide-out">Slide Out</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="s-email">Your email</label>
-          <input id="s-email" class="control" type="email" placeholder="name@example.com" required>
-        </div>
-        <div class="field">
-          <label for="s-issue">What happened</label>
-          <textarea id="s-issue" class="control" rows="4" placeholder="What you expected, and what the app did instead." required></textarea>
-        </div>
-        <button class="btn btn--grape btn--full" type="submit">File ticket</button>
-      </form>
-    </div>
-  </section>
-</main>
-
-<!-- ================= CONTACT ================= -->
-<main id="view-contact" class="view" tabindex="-1">
-  <section class="shell band">
-    <div class="head head--center">
-      <span class="eyebrow">Contact</span>
-      <h2 class="head__title">Tell me what you're building</h2>
-      <p class="head__note">Product idea, backend rescue, or an AI feature stuck at the prototype stage — start here.</p>
-    </div>
-
-    <div class="duo">
-      <div class="card card--accent" style="--accent: var(--indigo-edge)">
-        <div class="group__icon" style="--tint: var(--indigo-tint); --edge: var(--indigo)" aria-hidden="true">📬</div>
-        <h3 style="font-size: 1.35rem; margin: .9rem 0 .4rem;">Let's collaborate</h3>
-        <p>Every message lands in the same inbox I use for support. You'll get a reply from me, not an autoresponder.</p>
-        <div class="deets">
-          <div class="deet"><span aria-hidden="true">📧</span><span class="deet__k">Email</span><a href="mailto:nrdda.owner@gmail.com">nrdda.owner@gmail.com</a></div>
-          <div class="deet"><span aria-hidden="true">📍</span><span class="deet__k">Location</span><span>Hyderabad, India</span></div>
-          <div class="deet"><span aria-hidden="true">💼</span><span class="deet__k">Company</span><span>NRDDA Tech</span></div>
-        </div>
-      </div>
-
-      <div class="card card--accent" style="--accent: var(--sky-edge)">
-        <span class="eyebrow eyebrow--sky">New enquiry</span>
-        <h3 style="font-size: 1.35rem; margin: .9rem 0 1.25rem;">Send a message</h3>
-        <form id="contact-form" novalidate>
-          <div class="field">
-            <label for="c-name">Your name</label>
-            <input id="c-name" class="control" type="text" placeholder="e.g. Rahul Sharma" required>
-          </div>
-          <div class="field">
-            <label for="c-email">Email address</label>
-            <input id="c-email" class="control" type="email" placeholder="name@example.com" required>
-          </div>
-          <div class="field">
-            <label for="c-msg">What you're building</label>
-            <textarea id="c-msg" class="control" rows="4" placeholder="A sentence or two about the project and where it's stuck." required></textarea>
-          </div>
-          <button class="btn btn--sky btn--full" type="submit">Send message</button>
-        </form>
-      </div>
-    </div>
-  </section>
-</main>
-
-</div>
-
-<!-- ================= FOOTER ================= -->
-<footer class="foot">
-  <div class="foot__inner">
-    <div>
-      <div class="foot__brand">⚡ NRDDA</div>
-      <p class="foot__note">Dipak Chouhan · Java full stack &amp; AI engineer</p>
-      <p class="foot__note">Hyderabad, India</p>
-    </div>
-    <div class="foot__col">
-      <h4>Pages</h4>
-      <button class="foot__link" type="button" data-go="home">Home</button>
-      <button class="foot__link" type="button" data-go="products">Products</button>
-      <button class="foot__link" type="button" data-go="support">Support</button>
-      <button class="foot__link" type="button" data-go="contact">Contact</button>
-    </div>
-    <div class="foot__col">
-      <h4>Legal</h4>
-      <a href="privacy/index.html">Privacy policies</a>
-      <a href="privacy/neet-ai.html">NEET AI</a>
-      <a href="privacy/hisaabkikitaab.html">HisaabKiKitaab</a>
-      <a href="privacy/detective-ira.html">Detective IRA</a>
-      <a href="privacy/ira-ball-sort.html">IRA Ball Sort</a>
-      <a href="privacy/slide-out.html">Slide Out</a>
-    </div>
-    <div class="foot__col">
-      <h4>Direct</h4>
-      <a href="mailto:nrdda.owner@gmail.com">nrdda.owner@gmail.com</a>
+<section id="top" class="wrap hero">
+  <div class="hero__copy">
+    <span class="eyebrow">NRDDA Tech · Hyderabad, India</span>
+    <h1 class="h1">Apps people use every day, built and run by one engineer.</h1>
+    <p class="lede">I'm Dipak Chouhan, a Java full stack and AI engineer with eight years in enterprise systems. NRDDA is where that work ships as products: five web and Android apps, each one still maintained.</p>
+    <div class="actions">
+      <a class="btn btn--green btn--lg" href="#apps">See the apps</a>
+      <a class="btn btn--line btn--lg" href="#contact">Start a project</a>
     </div>
   </div>
-  <div class="foot__legal">© 2026 NRDDA Tech · Built and maintained by one person</div>
+  <div class="feature">
+    <img class="art" src="assets/slide-out/feature.jpg" width="1024" height="500" alt="Slide Out: Bristle the hedgehog beside a board of wooden sticks in a lantern-lit cabin">
+    <div class="feature__row">
+      <img src="assets/apps/slide-out.png" width="56" height="56" alt="" style="border-radius: 14px;">
+      <div>
+        <div class="label">New on Google Play</div>
+        <div class="feature__name">Slide Out: Stick Puzzle</div>
+      </div>
+      <a class="btn btn--ink btn--sm" href="apps/slide-out.html">View app</a>
+    </div>
+  </div>
+</section>
+
+<section class="proof" aria-label="At a glance">
+  <div class="wrap">
+    <div class="proof__item"><div class="proof__n">8+ years</div><div class="muted">Java and enterprise systems</div></div>
+    <div class="proof__item"><div class="proof__n">5 products</div><div class="muted">Live on web and Android</div></div>
+    <div class="proof__item"><div class="proof__n">Oracle</div><div class="muted">Certified professional</div></div>
+    <div class="proof__item"><div class="proof__n">1 inbox</div><div class="muted">Support reaches me, not a queue</div></div>
+  </div>
+</section>
+
+<section id="apps" class="wrap section">
+  <span id="products"></span>
+  <div class="section-head">
+    <div>
+      <span class="eyebrow">The apps</span>
+      <h2 class="h2">Five products, games to AI</h2>
+    </div>
+    <p class="muted" style="max-width: 420px;">Each has its own privacy policy and a support line that reaches the person who wrote it.</p>
+  </div>
+  <div class="apps">
+
+    <article class="app">
+      <div class="app__top">
+        <img class="app__icon" src="assets/apps/slide-out.png" width="64" height="64" alt="">
+        <div><div class="label">Game · Android</div><h3>Slide Out</h3></div>
+      </div>
+      <p>Tap a stick and watch it slide free. 1000 calm logic puzzles, a new board every day and eight cabin themes, with no timers.</p>
+      <div class="app__links">
+        <a class="btn btn--ink btn--sm" href="https://play.google.com/store/apps/details?id=com.nrdda.slideout">Get it on Google Play</a>
+        <a href="apps/slide-out.html">Details</a>
+      </div>
+    </article>
+
+    <article class="app">
+      <div class="app__top">
+        <img class="app__icon app__icon--line" src="assets/apps/hisaabkikitaab.svg" width="64" height="64" alt="">
+        <div><div class="label">Utility · Android</div><h3>HisaabKiKitaab</h3></div>
+      </div>
+      <p>An offline-first expense tracker and daily ledger built for fast entry and honest month-end numbers. Works with no signal, backed up privately to your own account.</p>
+      <div class="app__links">
+        <a class="btn btn--ink btn--sm" href="https://play.google.com/store/apps/details?id=com.nrdda.hisaabkikitab">Get it on Google Play</a>
+        <a href="privacy/hisaabkikitaab.html">Privacy</a>
+      </div>
+    </article>
+
+    <article class="app">
+      <div class="app__top">
+        <img class="app__icon" src="assets/apps/neet-ai.svg" width="64" height="64" alt="">
+        <div><div class="label">AI · Web and Android</div><h3>NEET AI</h3></div>
+      </div>
+      <p>An AI preparation assistant for medical aspirants: interactive tutoring, answers on demand, and practice analytics that show where the gaps are.</p>
+      <div class="app__links">
+        <span class="label">Launching soon</span>
+        <a href="privacy/neet-ai.html">Privacy</a>
+      </div>
+    </article>
+
+    <article class="app">
+      <div class="app__top">
+        <img class="app__icon" src="assets/apps/detective-ira.svg" width="64" height="64" alt="">
+        <div><div class="label">Game · Android</div><h3>Detective IRA</h3></div>
+      </div>
+      <p>A mystery game where you read clues, question suspects, and commit to an accusation. Every case is hand-written.</p>
+      <div class="app__links">
+        <span class="label">Launching soon</span>
+        <a href="privacy/detective-ira.html">Privacy</a>
+      </div>
+    </article>
+
+    <article class="app">
+      <div class="app__top">
+        <img class="app__icon" src="assets/apps/ira-ball-sort.png" width="64" height="64" alt="">
+        <div><div class="label">Game · Android · Early access</div><h3>IRA Ball Sort</h3></div>
+      </div>
+      <p>A colour-sorting puzzle tuned for the quiet ten minutes: no timers, no ads mid-move, just the next tube.</p>
+      <div class="app__links">
+        <a class="btn btn--line btn--sm" href="https://play.google.com/apps/internaltest/4700191697883584967">Join early access</a>
+        <a href="privacy/ira-ball-sort.html">Privacy</a>
+      </div>
+    </article>
+
+    <article class="app app--invite">
+      <h3>Have an app in mind?</h3>
+      <p style="flex: 0;">The same hands that built these take on client work: backend, AI features and Android.</p>
+      <a href="#contact" style="font-weight: 600;">Start a project</a>
+    </article>
+
+  </div>
+</section>
+
+<section id="work" class="section section--soft">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Engineering</span>
+        <h2 class="h2">Three layers, one person maintaining all of them</h2>
+        <p class="lede" style="font-size: 18px;">Each group is the toolset behind something that is running right now, at work or in one of the apps above.</p>
+      </div>
+    </div>
+    <div class="stack">
+      <div class="stack__group">
+        <div class="label">01</div>
+        <h3>Backend and microservices</h3>
+        <p>Domain services, event flow, and the schema discipline that keeps releases boring.</p>
+        <div class="chips"><span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">Spring JPA</span><span class="chip">Microservices</span><span class="chip">Kafka</span><span class="chip">REST APIs</span><span class="chip">Oracle SQL</span><span class="chip">Flyway</span><span class="chip">Redis</span></div>
+      </div>
+      <div class="stack__group">
+        <div class="label">02</div>
+        <h3>AI, GenAI and mobile</h3>
+        <p>Retrieval and model orchestration on the server, delivered through native Android.</p>
+        <div class="chips"><span class="chip">Android</span><span class="chip">GenAI</span><span class="chip">LangChain</span><span class="chip">RAG architecture</span><span class="chip">Gemini API</span><span class="chip">Claude</span><span class="chip">GitHub Copilot</span></div>
+      </div>
+      <div class="stack__group">
+        <div class="label">03</div>
+        <h3>Frontend and DevOps</h3>
+        <p>The surface people actually touch, and the pipeline that gets it there.</p>
+        <div class="chips"><span class="chip">Angular</span><span class="chip">ReactJS</span><span class="chip">Bootstrap</span><span class="chip">AWS</span><span class="chip">Docker</span><span class="chip">Git</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="support" class="wrap section split">
+  <div>
+    <span class="eyebrow">Support</span>
+    <h2 class="h2" style="font-size: clamp(30px, 3.2vw, 42px);">Something broken? It reaches me, not a queue.</h2>
+    <p class="muted" style="color: var(--ink-2);">Name the app and say what you did right before it went wrong. You get a reply from the person who wrote the code.</p>
+    <div class="actions" style="align-items: center;">
+      <a class="btn btn--ink" href="mailto:nrdda.owner@gmail.com?subject=Support">Email support</a>
+      <span class="mono" style="color: var(--ink-2);">nrdda.owner@gmail.com</span>
+    </div>
+  </div>
+  <div class="panel">
+    <h3>Privacy policies</h3>
+    <p class="muted">One for each app: what stays on your phone, and what Google's services collect.</p>
+    <a class="row-link" href="privacy/slide-out.html">Slide Out<span aria-hidden="true">→</span></a>
+    <a class="row-link" href="privacy/hisaabkikitaab.html">HisaabKiKitaab<span aria-hidden="true">→</span></a>
+    <a class="row-link" href="privacy/neet-ai.html">NEET AI<span aria-hidden="true">→</span></a>
+    <a class="row-link" href="privacy/detective-ira.html">Detective IRA<span aria-hidden="true">→</span></a>
+    <a class="row-link" href="privacy/ira-ball-sort.html">IRA Ball Sort<span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<section id="contact" class="band-ink">
+  <div class="wrap">
+    <div style="display: grid; gap: 18px;">
+      <span class="eyebrow">Contact</span>
+      <h2>Tell me what you're building.</h2>
+      <p>A product idea, a backend rescue, or an AI feature stuck at the prototype stage. Every message lands in the inbox I read myself.</p>
+    </div>
+    <div style="display: grid; gap: 14px; justify-items: start;">
+      <a class="btn btn--white btn--lg" href="mailto:nrdda.owner@gmail.com?subject=New%20project">Email nrdda.owner@gmail.com</a>
+      <div class="meta"><span>Hyderabad, India</span><span>NRDDA Tech</span><span>Oracle certified</span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <a class="wordmark" href="#top" style="font-size: 22px;" aria-label="NRDDA home">nrdda<span>.</span></a>
+    <nav aria-label="Footer">
+      <a href="#apps">Apps</a>
+      <a href="#work">Engineering</a>
+      <a href="#support">Support</a>
+      <a href="privacy/index.html">Privacy</a>
+    </nav>
+    <span class="legal">© 2026 NRDDA Tech · Built and maintained by one person</span>
+  </div>
 </footer>
-
-<script>
-/* ------------------------------------------------------------------
-   Single source of truth: drives the hero roster, the product grid,
-   the filter counts, and the stat tile.
-   ------------------------------------------------------------------ */
-const products = [
-  {
-    id: "neet-ai",
-    title: "NEET AI",
-    category: "ai",
-    platforms: ["Web", "Android"],
-    icon: "🧠",
-    tint: "var(--indigo-tint)",
-    accent: "var(--indigo-edge)",
-    description: "An AI preparation assistant for medical aspirants: interactive tutoring, answers on demand, and practice analytics that show where the gaps are.",
-    webUrl: "#",
-    playStoreUrl: "#"
-  },
-  {
-    id: "hisaabkikitaab",
-    title: "HisaabKiKitaab",
-    category: "utility",
-    platforms: ["Android"],
-    icon: "📚",
-    tint: "var(--coral-tint)",
-    accent: "var(--coral-edge)",
-    description: "An offline-first expense tracker and daily ledger built for fast entry and honest month-end numbers. Works with no signal, backed up privately to your own account.",
-    playStoreUrl: "https://play.google.com/store/apps/details?id=com.nrdda.hisaabkikitab"
-  },
-  {
-    id: "detective-ira",
-    title: "Detective IRA",
-    category: "game",
-    platforms: ["Android"],
-    icon: "🕵️",
-    tint: "var(--grape-tint)",
-    accent: "var(--grape-edge)",
-    description: "A mystery game where you read clues, question suspects, and commit to an accusation. Every case is hand-written.",
-    playStoreUrl: "#"
-  },
-  {
-    id: "ball-sort",
-    title: "IRA Ball Sort",
-    category: "game",
-    platforms: ["Android"],
-    icon: "🧪",
-    tint: "var(--sky-tint)",
-    accent: "var(--sky-edge)",
-    description: "A colour-sorting puzzle tuned for the quiet ten minutes: no timers, no ads mid-move, just the next tube.",
-    playStoreUrl: "https://play.google.com/apps/internaltest/4700191697883584967"
-  },
-  {
-    id: "slide-out",
-    title: "Slide Out",
-    category: "game",
-    platforms: ["Android"],
-    icon: "🪵",
-    tint: "var(--grass-tint)",
-    accent: "var(--grass-edge)",
-    description: "Tap a stick and watch it slide free. 1000 calm logic puzzles, a new board every day and eight cabin themes, with no timers.",
-    playStoreUrl: "https://play.google.com/store/apps/details?id=com.nrdda.slideout"
-  }
-];
-
-const CATEGORIES = [
-  { key: "all",     label: "All apps" },
-  { key: "ai",      label: "AI & web" },
-  { key: "game",    label: "Mobile games" },
-  { key: "utility", label: "Utilities" }
-];
-
-const ROUTES = ["home", "products", "support", "contact"];
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-let activeCategory = "all";
-
-const esc = s => String(s).replace(/[&<>"']/g, c =>
-  ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-
-/* ---------- hero roster ---------- */
-
-function renderRoster() {
-  document.getElementById("roster").innerHTML = products.map(p => `
-    <li>
-      <span class="pip" aria-hidden="true"></span>
-      <span>${esc(p.title)}</span>
-      <span class="plat">${esc(p.platforms.join(" · "))}</span>
-    </li>`).join("");
-  document.getElementById("stat-products").textContent = products.length;
-}
-
-/* ---------- filters ---------- */
-
-const countFor = key =>
-  key === "all" ? products.length : products.filter(p => p.category === key).length;
-
-function renderTabs() {
-  document.getElementById("tabs").innerHTML = CATEGORIES.map(c => `
-    <button class="tab" type="button" data-cat="${c.key}" aria-pressed="${c.key === activeCategory}">
-      ${esc(c.label)}<span class="tab__n">${countFor(c.key)}</span>
-    </button>`).join("");
-}
-
-function applyFilters() {
-  const query = (document.getElementById("search-input").value || "").trim().toLowerCase();
-  const matches = products.filter(p => {
-    const inCategory = activeCategory === "all" || p.category === activeCategory;
-    const inQuery = !query ||
-      p.title.toLowerCase().includes(query) ||
-      p.description.toLowerCase().includes(query);
-    return inCategory && inQuery;
-  });
-  renderProducts(matches, query);
-}
-
-function renderProducts(items, query) {
-  const grid = document.getElementById("products-grid");
-
-  if (!items.length) {
-    grid.innerHTML = `
-      <div class="empty">
-        <div class="empty__emoji" aria-hidden="true">🔍</div>
-        <h3>No products match ${query ? `“${esc(query)}”` : "that filter"}</h3>
-        <p>Clear the search or switch back to All apps to see everything.</p>
-      </div>`;
-    return;
-  }
-
-  grid.innerHTML = items.map(p => {
-    const plats = p.platforms
-      .map(t => `<span class="plat-tag plat-${t.toLowerCase()}">${esc(t)}</span>`).join("");
-
-    const actions = [
-      p.webUrl ? `<a class="btn btn--sm" href="${p.webUrl}" target="_blank" rel="noopener noreferrer">Launch web app 🚀</a>` : "",
-      p.playStoreUrl ? `<a class="btn btn--sm btn--grass" href="${p.playStoreUrl}" target="_blank" rel="noopener noreferrer">Get on Google Play 📱</a>` : ""
-    ].join("");
-
-    return `
-      <article class="card card--tap card--accent product" style="--accent: ${p.accent}; --tint: ${p.tint};">
-        <div class="product__icon" aria-hidden="true">${p.icon}</div>
-        <div class="plats">${plats}</div>
-        <div>
-          <h3>${esc(p.title)}</h3>
-          <p>${esc(p.description)}</p>
-        </div>
-        <div class="product__actions">${actions}</div>
-      </article>`;
-  }).join("");
-}
-
-/* ---------- router ---------- */
-
-function switchPage(pageId, updateHash = true) {
-  if (!ROUTES.includes(pageId)) pageId = "home";
-
-  document.querySelectorAll(".view").forEach(v => v.classList.remove("is-active", "is-entering"));
-  const view = document.getElementById(`view-${pageId}`);
-  view.classList.add("is-active");
-  if (!reduceMotion) {
-    void view.offsetWidth;              // restart the enter animation
-    view.classList.add("is-entering");
-  }
-
-  document.querySelectorAll(".navlink").forEach(link => {
-    if (link.dataset.go === pageId) link.setAttribute("aria-current", "page");
-    else link.removeAttribute("aria-current");
-  });
-
-  closeMenu();
-
-  if (updateHash) {
-    if (window.location.hash !== `#${pageId}`) history.pushState(null, "", `#${pageId}`);
-    view.focus({ preventScroll: true });
-  }
-
-  window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
-}
-
-/* ---------- mobile menu ---------- */
-
-const toggle = document.getElementById("navtoggle");
-const menu = document.getElementById("navlinks");
-
-function closeMenu() {
-  menu.classList.remove("is-open");
-  toggle.setAttribute("aria-expanded", "false");
-  toggle.setAttribute("aria-label", "Open menu");
-  toggle.textContent = "☰";
-}
-
-toggle.addEventListener("click", () => {
-  const open = menu.classList.toggle("is-open");
-  toggle.setAttribute("aria-expanded", String(open));
-  toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-  toggle.textContent = open ? "✕" : "☰";
-});
-
-document.addEventListener("keydown", e => {
-  if (e.key === "Escape" && menu.classList.contains("is-open")) {
-    closeMenu();
-    toggle.focus();
-  }
-});
-
-/* ---------- toasts ---------- */
-
-function showToast(message) {
-  const toast = document.createElement("div");
-  toast.className = "toast";
-  toast.innerHTML = `<span class="toast__mark" aria-hidden="true">✅</span><span></span>`;
-  toast.lastElementChild.textContent = message;
-  document.getElementById("toasts").appendChild(toast);
-
-  setTimeout(() => {
-    toast.classList.add("is-leaving");
-    setTimeout(() => toast.remove(), 300);
-  }, 4200);
-}
-
-/* ---------- wiring ---------- */
-
-document.addEventListener("click", e => {
-  const nav = e.target.closest("[data-go]");
-  if (nav) { e.preventDefault(); switchPage(nav.dataset.go); return; }
-
-  const tab = e.target.closest(".tab");
-  if (tab) {
-    activeCategory = tab.dataset.cat;
-    document.querySelectorAll(".tab").forEach(t =>
-      t.setAttribute("aria-pressed", String(t.dataset.cat === activeCategory)));
-    applyFilters();
-  }
-});
-
-document.getElementById("search-input").addEventListener("input", applyFilters);
-
-function wireForm(id, message) {
-  document.getElementById(id).addEventListener("submit", e => {
-    e.preventDefault();
-    if (!e.target.checkValidity()) { e.target.reportValidity(); return; }
-    e.target.reset();
-    showToast(message);
-  });
-}
-wireForm("contact-form", "Message sent. I'll reply to that address.");
-wireForm("support-form", "Ticket filed. You'll get a reply at the email you gave.");
-
-window.addEventListener("popstate", () =>
-  switchPage((window.location.hash || "#home").slice(1), false));
-
-renderRoster();
-renderTabs();
-applyFilters();
-switchPage((window.location.hash || "#home").slice(1), false);
-</script>
 </body>
 </html>
