@@ -366,3 +366,11 @@ code {
   .layout { grid-template-columns: 1fr; }
   body { font-size: 11pt; }
 }
+
+/* The NRDDA wordmark: Syne, lower case, a green full stop. */
+.brand__word {
+  font-family: "Syne", "Nunito", system-ui, sans-serif;
+  font-weight: 800; font-size: 1.6rem; letter-spacing: -0.05em; line-height: 1;
+  color: #0D1117;
+}
+.brand__word span { color: #16A34A; }
