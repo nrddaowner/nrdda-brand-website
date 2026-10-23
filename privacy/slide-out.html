@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — Slide Out | NRDDA</title>
-<meta name="description" content="Privacy policy for Slide Out (com.nrdda.slideout) by NRDDA Tech: no account required, progress saved on your device, ads by Google AdMob, optional purchases through Google Play.">
+<meta name="description" content="Privacy policy for Slide Out (com.nrdda.slideout) by NRDDA Tech: no account required, progress saved on your device, ads by Google AdMob, game settings from Firebase Remote Config, optional purchases through Google Play.">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://nrdda.com/privacy/slide-out.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +40,7 @@
       when they show ads or process purchases, and how to switch each of those off.
     </p>
     <div class="appmeta">
-      <span class="metapill">Effective <b>20 October 2026</b></span>
+      <span class="metapill">Effective <b>23 October 2026</b></span>
       <span class="metapill">Package <b>com.nrdda.slideout</b></span>
       <span class="metapill">Publisher <b>NRDDA Tech</b></span>
       <span class="metapill">Platform <b>Android</b></span>
@@ -84,6 +84,7 @@
           <li><strong>No account, ever.</strong> We never ask for your name, email address, phone number, photos or location.</li>
           <li><strong>Your progress stays on your phone.</strong> Levels, stars, hearts, hints, streaks, themes and settings are stored in the App&rsquo;s private storage.</li>
           <li><strong>We run no server for this game</strong> and the App contains no analytics or crash-reporting SDK. Anything that leaves your device goes to a Google service, never to a server of ours.</li>
+          <li><strong>Game settings come from Firebase.</strong> The App downloads settings such as how often ads appear and how many hearts you get from Google&rsquo;s Firebase Remote Config. This uses a random installation ID, not your identity.</li>
           <li><strong>The game is ad-supported.</strong> Ads come from Google AdMob. A one-time purchase, Slide Out Plus, removes interstitial and banner ads.</li>
           <li><strong>We never sell your personal information</strong>, to anyone.</li>
         </ul>
@@ -118,6 +119,10 @@
           the game&rsquo;s Settings or in Android&rsquo;s notification settings.
         </p>
         <p>
+          When Google Play has a newer version of the App, it may post one local notification for that version,
+          on its own &ldquo;Updates&rdquo; notification channel that you can switch off in Android&rsquo;s settings.
+        </p>
+        <p>
           Home-screen widgets, if you add them, read your progress from the App&rsquo;s private storage on the
           same phone. They send nothing anywhere.
         </p>
@@ -148,8 +153,8 @@
         <div class="card__head"><span class="tag tag--coral">Advertising</span><h3>Google AdMob</h3></div>
         <p>
           The App shows no ads during your first few sessions. After that it shows <strong>interstitial
-          ads</strong> between some levels (not more often than every few levels and never within a minute and
-          a half of another ad), a <strong>banner ad</strong> on menu screens (never on the puzzle board), a <strong>native ad</strong>
+          ads</strong> between some levels (at most one every few levels, and never right after another
+          full-screen ad), a <strong>banner ad</strong> on menu screens (never on the puzzle board), a <strong>native ad</strong>
           (an advertiser's card, clearly marked &ldquo;Ad&rdquo;) on the streak screen, and
           <strong>rewarded video ads</strong> that you can choose to watch to refill your hearts or get a hint.
         </p>
@@ -162,6 +167,37 @@
           <strong>Purpose:</strong> showing ads, measuring them, limiting how often you see the same ad, and
           preventing fraud. Whether ads are personalised depends on your consent choice (see
           <a href="#consent">section 05</a>) and your device&rsquo;s ad settings.
+        </p>
+      </div>
+
+      <div class="card card--accent">
+        <div class="card__head"><span class="tag">Game settings</span><h3>Firebase Remote Config</h3></div>
+        <p>
+          The App downloads its game settings from Firebase Remote Config, a Google service. These settings
+          decide how often ads appear, how many hearts you hold and how fast they refill, and when the App offers
+          a hint, a skip or an update. They let us tune the game without shipping a new version. The game always
+          works offline with the settings it already has.
+        </p>
+        <p>
+          <strong>Data collected by Firebase:</strong> a Firebase installation ID (a random identifier created
+          for this install of the App, not linked to your name, account or Advertising ID), the App&rsquo;s
+          version, the device&rsquo;s language, country and time zone, Android version, and the IP address the
+          request comes from.
+        </p>
+        <p>
+          <strong>Purpose:</strong> delivering the right settings to this install. We do not use it for
+          advertising or analytics, and Firebase Analytics is not included in the App. Uninstalling the App or
+          clearing its data removes the installation ID from your phone; Google deletes the server copy under
+          its Firebase retention terms.
+        </p>
+      </div>
+
+      <div class="card card--accent">
+        <div class="card__head"><span class="tag">Updates</span><h3>Google Play In-App Updates</h3></div>
+        <p>
+          The App asks Google Play whether a newer version is available, and can then show Google Play&rsquo;s own
+          update screen. Downloading and installing the update are handled entirely by Google Play. Rarely, when
+          an old version can no longer work properly, the App may ask you to update before you keep playing.
         </p>
       </div>
 
@@ -224,10 +260,10 @@
             <tr><th scope="col">Permission</th><th scope="col">Why the App needs it</th></tr>
           </thead>
           <tbody>
-            <tr><td><code>INTERNET</code></td><td>Loading ads and processing purchases.</td></tr>
+            <tr><td><code>INTERNET</code></td><td>Loading ads, processing purchases, downloading game settings and checking for updates.</td></tr>
             <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Checking whether you are online, so the game keeps working offline.</td></tr>
             <tr><td><code>VIBRATE</code></td><td>Haptic feedback when sticks slide, stop and clear. Can be turned off in Settings.</td></tr>
-            <tr><td><code>POST_NOTIFICATIONS</code></td><td>Showing local daily reminders on Android 13 and newer. Android asks you first.</td></tr>
+            <tr><td><code>POST_NOTIFICATIONS</code></td><td>Showing local reminders and the new-version notice on Android 13 and newer. Android asks you first.</td></tr>
             <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Re-scheduling your local reminder after the phone restarts.</td></tr>
             <tr><td><code>AD_ID</code></td><td>Letting AdMob read the Advertising ID, according to your consent and device settings. Added by the Google Mobile Ads SDK.</td></tr>
           </tbody>
@@ -254,6 +290,7 @@
             <tr><td>Approximate location (from IP address)</td><td>AdMob</td><td>Yes, through AdMob</td><td>Advertising, fraud prevention</td></tr>
             <tr><td>App interactions (ad views and taps)</td><td>AdMob</td><td>No</td><td>Advertising, analytics</td></tr>
             <tr><td>Diagnostics (ad SDK performance)</td><td>AdMob</td><td>No</td><td>Fraud prevention, ad delivery</td></tr>
+            <tr><td>Device or other IDs (Firebase installation ID)</td><td>Firebase Remote Config</td><td>No</td><td>App functionality (game settings)</td></tr>
             <tr><td>Purchase history</td><td>Google Play Billing</td><td>No</td><td>Delivering purchases (optional)</td></tr>
           </tbody>
         </table>
@@ -281,8 +318,8 @@
         <li><strong>Local game data:</strong> Android Settings &rsaquo; Apps &rsaquo; Slide Out &rsaquo; Storage &rsaquo; <strong>Clear data</strong>, or uninstall the App.</li>
         <li>
           <strong>Access or deletion requests:</strong> email us. We hold no personal data about you ourselves, so
-          we will tell you what the App stores on your phone and work with Google on anything held by AdMob or
-          Google Play. We reply within 30 days, free of charge. This applies under India&rsquo;s Digital Personal
+          we will tell you what the App stores on your phone and work with Google on anything held by AdMob,
+          Firebase or Google Play. We reply within 30 days, free of charge. This applies under India&rsquo;s Digital Personal
           Data Protection Act 2023, the EU/UK GDPR and California&rsquo;s CCPA/CPRA, and we extend it to everyone
           wherever they live.
         </li>
@@ -295,7 +332,7 @@
         <li><strong>In transit:</strong> all traffic to Google services uses HTTPS/TLS.</li>
         <li><strong>On device:</strong> game data is kept in the App&rsquo;s private storage, protected by Android&rsquo;s app sandbox.</li>
         <li><strong>Backups:</strong> a backup file you create is kept wherever you saved it, until you delete it.</li>
-        <li><strong>Ads and purchases:</strong> kept by Google under its own retention policies.</li>
+        <li><strong>Ads, purchases and game settings:</strong> kept by Google (AdMob, Google Play and Firebase) under its own retention policies.</li>
         <li><strong>Local data:</strong> kept until you clear it or uninstall the App.</li>
       </ul>
       <p>No system is completely secure, but we use the protections above and collect as little as we can.</p>
@@ -319,7 +356,8 @@
       </div>
       <p>
         Google&rsquo;s policies: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> ·
-        <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">How Google uses data in ads</a>
+        <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">How Google uses data in ads</a> ·
+        <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Privacy and security in Firebase</a>
       </p>
     </section>
 
