@@ -9,31 +9,30 @@
 <link rel="canonical" href="https://nrddaowner.github.io/nrdda-brand-website/privacy/hisaabkikitaab.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
 <link rel="stylesheet" href="policy.css">
 </head>
-<body style="--accent: var(--coral); --accent-edge: var(--coral-edge); --accent-tint: var(--coral-tint);">
+<body>
 
-<a class="skip-link" href="#doc">Skip to policy</a>
+<a class="skip" href="#doc">Skip to policy</a>
 
-<header class="topbar">
-  <div class="topbar__inner">
-    <a class="brand" href="../index.html">
-      <span class="brand__word">nrdda<span>.</span></span>
-    </a>
-    <nav class="topbar__links" aria-label="Privacy policies">
-      <a href="index.html">All policies</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="wordmark wordmark--sm" href="../index.html" aria-label="NRDDA home">nrdda<span>.</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../index.html#apps">Apps</a>
+      <a href="../index.html#work">Engineering</a>
       <a href="../index.html#support">Support</a>
-      <a href="mailto:nrdda.owner@gmail.com">Contact</a>
+      <a class="btn btn--ink btn--sm" href="../index.html#contact">Start a project</a>
     </nav>
   </div>
 </header>
 
 <section class="masthead">
   <div class="shell">
-    <span class="eyebrow">📚 Privacy policy</span>
+    <span class="eyebrow">Privacy policy</span>
     <h1>HisaabKiKitaab</h1>
     <p class="masthead__lede">
       HisaabKiKitaab holds your money records, so you are owed an unusually direct account of where
@@ -97,8 +96,8 @@
         HisaabKiKitaab keeps two copies of your ledger, and it is important that you know about both.
       </p>
 
-      <div class="card card--accent">
-        <div class="card__head"><span class="tag tag--grass">Copy 1</span><h3>On your device</h3></div>
+      <div class="card">
+        <div class="card__head"><span class="tag">Copy 1</span><h3>On your device</h3></div>
         <p>
           Every expense, budget, category, and note you enter is written first to a local database in the
           app&rsquo;s private storage, protected by the Android sandbox so that other apps cannot read it. This
@@ -106,8 +105,8 @@
         </p>
       </div>
 
-      <div class="card card--accent">
-        <div class="card__head"><span class="tag tag--coral">Copy 2</span><h3>In your private cloud backup</h3></div>
+      <div class="card">
+        <div class="card__head"><span class="tag">Copy 2</span><h3>In your private cloud backup</h3></div>
         <p>
           When you are signed in, the app synchronises your ledger to <strong>Google Firebase Realtime
           Database</strong>, stored under a path keyed to your own account ID. This is what lets you reinstall
@@ -141,7 +140,7 @@
     <section id="collection">
       <h2>03. What we collect and why</h2>
 
-      <div class="card card--accent">
+      <div class="card">
         <div class="card__head"><span class="tag">Account</span><h3>Sign-up and sign-in</h3></div>
         <p>
           <strong>Collected:</strong> your email address and a password, handled by Google Firebase
@@ -153,8 +152,8 @@
         </p>
       </div>
 
-      <div class="card card--accent">
-        <div class="card__head"><span class="tag tag--coral">Financial</span><h3>The entries you type</h3></div>
+      <div class="card">
+        <div class="card__head"><span class="tag">Financial</span><h3>The entries you type</h3></div>
         <p>
           <strong>Collected:</strong> the expense amounts, categories, dates, payment modes, budgets, and free-text
           notes you enter yourself.
@@ -170,7 +169,7 @@
         </p>
       </div>
 
-      <div class="card card--accent">
+      <div class="card">
         <div class="card__head"><span class="tag">Diagnostics</span><h3>Analytics, crashes, and configuration</h3></div>
         <p>
           <strong>Collected:</strong> anonymous Firebase app-instance ID, screen and feature usage events, session
@@ -184,8 +183,8 @@
         </p>
       </div>
 
-      <div class="card card--accent">
-        <div class="card__head"><span class="tag tag--coral">Advertising</span><h3>Google AdMob</h3></div>
+      <div class="card">
+        <div class="card__head"><span class="tag">Advertising</span><h3>Google AdMob</h3></div>
         <p>
           The free tier of the app displays banner advertisements served by Google AdMob. AdMob may collect
           your <strong>Advertising ID (GAID)</strong>, IP address, device model, OS version, and ad interaction
@@ -198,8 +197,8 @@
         </p>
       </div>
 
-      <div class="card card--accent">
-        <div class="card__head"><span class="tag tag--grape">Purchases</span><h3>Google Play Billing</h3></div>
+      <div class="card">
+        <div class="card__head"><span class="tag">Purchases</span><h3>Google Play Billing</h3></div>
         <p>
           <strong>Collected:</strong> purchase tokens, order IDs, product identifiers, and your entitlement status
           (whether the account is on the paid plan).
@@ -378,7 +377,7 @@
 
     <section id="contact">
       <h2>12. Contact</h2>
-      <div class="card card--accent">
+      <div class="card">
         <p><strong>Publisher:</strong> NRDDA Tech, Hyderabad, India</p>
         <p><strong>App:</strong> HisaabKiKitaab (<code>com.nrdda.hisaabkikitab</code>)</p>
         <p><strong>Data protection contact:</strong> Dipak Chouhan</p>
@@ -389,13 +388,15 @@
   </main>
 </div>
 
-<footer class="foot">
-  <div class="foot__inner">
-    <div>
-      <div class="foot__brand brand__word">nrdda<span>.</span></div>
-      <p class="foot__note">Dipak Chouhan · Hyderabad, India</p>
-    </div>
-    <p class="foot__note">© 2026 NRDDA Tech · <a href="index.html">All privacy policies</a></p>
+<footer class="site-foot">
+  <div class="wrap">
+    <a class="wordmark" href="../index.html" style="font-size: 22px;" aria-label="NRDDA home">nrdda<span>.</span></a>
+    <nav aria-label="Footer">
+      <a href="../index.html#apps">All apps</a>
+      <a href="../index.html#support">Support</a>
+      <a href="index.html">All privacy policies</a>
+    </nav>
+    <span class="legal">© 2026 NRDDA Tech</span>
   </div>
 </footer>
 

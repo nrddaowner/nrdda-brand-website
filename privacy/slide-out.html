@@ -9,31 +9,30 @@
 <link rel="canonical" href="https://nrdda.com/privacy/slide-out.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
 <link rel="stylesheet" href="policy.css">
 </head>
-<body style="--accent: var(--grass); --accent-edge: var(--grass-edge); --accent-tint: var(--grass-tint);">
+<body>
 
-<a class="skip-link" href="#doc">Skip to policy</a>
+<a class="skip" href="#doc">Skip to policy</a>
 
-<header class="topbar">
-  <div class="topbar__inner">
-    <a class="brand" href="../index.html">
-      <span class="brand__word">nrdda<span>.</span></span>
-    </a>
-    <nav class="topbar__links" aria-label="Privacy policies">
-      <a href="index.html">All policies</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="wordmark wordmark--sm" href="../index.html" aria-label="NRDDA home">nrdda<span>.</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../index.html#apps">Apps</a>
+      <a href="../index.html#work">Engineering</a>
       <a href="../index.html#support">Support</a>
-      <a href="mailto:nrdda.owner@gmail.com">Contact</a>
+      <a class="btn btn--ink btn--sm" href="../index.html#contact">Start a project</a>
     </nav>
   </div>
 </header>
 
 <section class="masthead">
   <div class="shell">
-    <span class="eyebrow">🪵 Privacy policy</span>
+    <span class="eyebrow">Privacy policy</span>
     <h1>Slide Out</h1>
     <p class="masthead__lede">
       A stick-sliding puzzle you can play from the first level to the last without telling us who you
@@ -95,8 +94,8 @@
     <section id="device">
       <h2>02. What stays on your device</h2>
 
-      <div class="card card--accent">
-        <div class="card__head"><span class="tag tag--grass">On device only</span><h3>Game progress and settings</h3></div>
+      <div class="card">
+        <div class="card__head"><span class="tag">On device only</span><h3>Game progress and settings</h3></div>
         <p>
           <strong>Stored:</strong> levels cleared, stars, hearts and their refill timer, hints, daily puzzle
           results and streak, themes and items you own or use, which new pieces you have already been shown,
@@ -112,8 +111,8 @@
         </p>
       </div>
 
-      <div class="card card--accent">
-        <div class="card__head"><span class="tag tag--grass">On device only</span><h3>Reminders and widgets</h3></div>
+      <div class="card">
+        <div class="card__head"><span class="tag">On device only</span><h3>Reminders and widgets</h3></div>
         <p>
           Daily puzzle and streak reminders are scheduled <strong>locally on your phone</strong>. There is no
           push-notification server and no notification token is sent anywhere. You can turn reminders off in
@@ -129,8 +128,8 @@
         </p>
       </div>
 
-      <div class="card card--accent">
-        <div class="card__head"><span class="tag tag--grass">You choose</span><h3>Backups and sharing</h3></div>
+      <div class="card">
+        <div class="card__head"><span class="tag">You choose</span><h3>Backups and sharing</h3></div>
         <p>
           <strong>Back up progress</strong> writes your save to a file in a place you pick, such as your
           phone&rsquo;s storage or a cloud drive app. <strong>Restore from backup</strong> reads a file you pick.
@@ -150,8 +149,8 @@
         Google&rsquo;s own privacy policy, acting as a service provider to us.
       </p>
 
-      <div class="card card--accent">
-        <div class="card__head"><span class="tag tag--coral">Advertising</span><h3>Google AdMob</h3></div>
+      <div class="card">
+        <div class="card__head"><span class="tag">Advertising</span><h3>Google AdMob</h3></div>
         <p>
           The App shows no ads during your first few sessions. After that it shows <strong>interstitial
           ads</strong> between some levels (at most one every few levels, and never right after another
@@ -171,7 +170,7 @@
         </p>
       </div>
 
-      <div class="card card--accent">
+      <div class="card">
         <div class="card__head"><span class="tag">Game settings</span><h3>Firebase Remote Config</h3></div>
         <p>
           The App downloads its game settings from Firebase Remote Config, a Google service. These settings
@@ -193,7 +192,7 @@
         </p>
       </div>
 
-      <div class="card card--accent">
+      <div class="card">
         <div class="card__head"><span class="tag">Updates</span><h3>Google Play In-App Updates</h3></div>
         <p>
           The App asks Google Play whether a newer version is available, and can then show Google Play&rsquo;s own
@@ -202,7 +201,7 @@
         </p>
       </div>
 
-      <div class="card card--accent">
+      <div class="card">
         <div class="card__head"><span class="tag">Ratings</span><h3>Google Play In-App Review</h3></div>
         <p>
           After you have played for a while, the App may ask Google Play to show its rating prompt. The
@@ -216,8 +215,8 @@
       <h2>04. Optional features</h2>
       <p>The following only happen if you choose them. The game is fully playable without them.</p>
 
-      <div class="card card--accent">
-        <div class="card__head"><span class="tag tag--grape">Optional</span><h3>Purchases through Google Play</h3></div>
+      <div class="card">
+        <div class="card__head"><span class="tag">Optional</span><h3>Purchases through Google Play</h3></div>
         <p>
           The App sells one thing: <strong>Slide Out Plus</strong>, a one-time purchase that removes interstitial
           and banner ads, gives unlimited hearts, and unlocks every theme, including themes added later. Rewarded
@@ -349,7 +348,7 @@
 
     <section id="contact">
       <h2>12. Contact</h2>
-      <div class="card card--accent">
+      <div class="card">
         <p><strong>Publisher:</strong> NRDDA Tech, Hyderabad, Telangana, India</p>
         <p><strong>App:</strong> Slide Out (<code>com.nrdda.slideout</code>)</p>
         <p><strong>Privacy contact / Grievance Officer:</strong> Dipak Chouhan</p>
@@ -365,13 +364,15 @@
   </main>
 </div>
 
-<footer class="foot">
-  <div class="foot__inner">
-    <div>
-      <div class="foot__brand brand__word">nrdda<span>.</span></div>
-      <p class="foot__note">Dipak Chouhan · Hyderabad, India</p>
-    </div>
-    <p class="foot__note">© 2026 NRDDA Tech · <a href="index.html">All privacy policies</a></p>
+<footer class="site-foot">
+  <div class="wrap">
+    <a class="wordmark" href="../index.html" style="font-size: 22px;" aria-label="NRDDA home">nrdda<span>.</span></a>
+    <nav aria-label="Footer">
+      <a href="../index.html#apps">All apps</a>
+      <a href="../index.html#support">Support</a>
+      <a href="index.html">All privacy policies</a>
+    </nav>
+    <span class="legal">© 2026 NRDDA Tech</span>
   </div>
 </footer>
 
