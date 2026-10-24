@@ -1,7 +1,8 @@
 /* ============================================================
    NRDDA — privacy policy pages.
    Same tactile light surface as the brand site: thick bottom
-   edges, solid under-shadows, Nunito throughout.
+   edges, solid under-shadows. Type matches assets/site.css:
+   Syne wordmark, Bricolage Grotesque headings, IBM Plex text.
    ============================================================ */
 
 :root {
@@ -48,6 +49,12 @@
   --accent:      var(--indigo);
   --accent-edge: var(--indigo-edge);
   --accent-tint: var(--indigo-tint);
+
+  /* the brand site's type roles, as in assets/site.css */
+  --wordmark: "Syne", "Bricolage Grotesque", system-ui, sans-serif;
+  --display: "Bricolage Grotesque", system-ui, sans-serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -55,9 +62,9 @@
 html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 
 body {
-  font-family: "Nunito", system-ui, -apple-system, sans-serif;
+  font-family: var(--body);
   font-size: 1rem;
-  line-height: 1.75;
+  line-height: 1.7;
   color: var(--ink);
   background: var(--page);
   -webkit-font-smoothing: antialiased;
@@ -82,15 +89,16 @@ img, svg { max-width: 100%; display: block; }
 .skip-link {
   position: absolute; left: 50%; top: -120px; transform: translateX(-50%);
   z-index: 3000; background: var(--accent); color: #fff;
-  font-weight: 800; font-size: .9rem;
+  font-weight: 600; font-size: .9rem;
   padding: .75rem 1.4rem; border-radius: 0 0 var(--r-md) var(--r-md);
   text-decoration: none;
 }
 .skip-link:focus { top: 0; }
 
-h1, h2, h3, h4 { font-weight: 900; line-height: 1.2; letter-spacing: -0.02em; }
+h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; text-wrap: balance; }
+h3, h4 { font-weight: 700; letter-spacing: -0.01em; }
 
-a { color: var(--accent-edge); font-weight: 700; }
+a { color: var(--accent-edge); font-weight: 500; }
 a:hover { text-decoration-thickness: 2px; }
 
 .shell {
@@ -115,7 +123,7 @@ a:hover { text-decoration-thickness: 2px; }
 }
 .brand {
   display: inline-flex; align-items: center; gap: .5rem;
-  font-weight: 900; font-size: 1.15rem; letter-spacing: -.02em;
+  font-weight: 600; font-size: 1.15rem; letter-spacing: -.02em;
   color: var(--ink); text-decoration: none;
 }
 .brand__bolt {
@@ -127,7 +135,7 @@ a:hover { text-decoration-thickness: 2px; }
 }
 .topbar__links { display: flex; gap: 1.25rem; align-items: center; }
 .topbar__links a {
-  font-size: .92rem; font-weight: 800; color: var(--ink-soft);
+  font-size: .92rem; font-weight: 500; color: var(--ink-soft);
   text-decoration: none;
 }
 .topbar__links a:hover { color: var(--accent-edge); }
@@ -142,7 +150,7 @@ a:hover { text-decoration-thickness: 2px; }
 
 .eyebrow {
   display: inline-flex; align-items: center; gap: .45rem;
-  font-size: .75rem; font-weight: 900;
+  font-family: var(--mono); font-size: .75rem; font-weight: 500;
   letter-spacing: .1em; text-transform: uppercase;
   color: var(--accent-edge);
   background: var(--accent-tint);
@@ -150,7 +158,8 @@ a:hover { text-decoration-thickness: 2px; }
 }
 
 .masthead h1 {
-  font-size: clamp(1.9rem, 5vw, 2.85rem);
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -0.03em;
   margin: 1rem 0 .75rem;
 }
 .masthead__lede {
@@ -170,9 +179,9 @@ a:hover { text-decoration-thickness: 2px; }
   border-bottom-width: 3px;
   border-radius: var(--r-pill);
   padding: .4rem .9rem;
-  font-size: .85rem; font-weight: 700; color: var(--ink-soft);
+  font-size: .85rem; font-weight: 500; color: var(--ink-soft);
 }
-.metapill b { color: var(--ink); font-weight: 900; }
+.metapill b { color: var(--ink); font-weight: 600; }
 
 /* ---------- layout ---------- */
 
@@ -197,6 +206,7 @@ a:hover { text-decoration-thickness: 2px; }
   padding: 1.15rem 1.25rem;
 }
 .toc h2 {
+  font-family: var(--mono); font-weight: 500;
   font-size: .75rem; letter-spacing: .1em; text-transform: uppercase;
   color: var(--ink-faint); margin-bottom: .75rem;
 }
@@ -204,12 +214,12 @@ a:hover { text-decoration-thickness: 2px; }
 .toc li { counter-increment: toc; }
 .toc a {
   display: block; padding: .3rem 0;
-  font-size: .89rem; font-weight: 700;
+  font-size: .89rem; font-weight: 500;
   color: var(--ink-soft); text-decoration: none;
 }
 .toc a::before {
   content: counter(toc, decimal-leading-zero) "  ";
-  color: var(--ink-faint); font-weight: 900; font-size: .8rem;
+  font-family: var(--mono); color: var(--ink-faint); font-weight: 500; font-size: .78rem;
 }
 .toc a:hover { color: var(--accent-edge); }
 
@@ -224,7 +234,7 @@ a:hover { text-decoration-thickness: 2px; }
 }
 .doc h3 { font-size: 1.05rem; margin: 1.5rem 0 .5rem; }
 .doc p { margin-bottom: .9rem; color: var(--ink-soft); }
-.doc p strong, .doc li strong { color: var(--ink); font-weight: 800; }
+.doc p strong, .doc li strong { color: var(--ink); font-weight: 600; }
 .doc ul { margin: 0 0 1rem 1.15rem; color: var(--ink-soft); }
 .doc li { margin-bottom: .45rem; }
 
@@ -245,7 +255,7 @@ a:hover { text-decoration-thickness: 2px; }
   margin-bottom: .35rem; flex-wrap: wrap;
 }
 .tag {
-  font-size: .68rem; font-weight: 900;
+  font-family: var(--mono); font-size: .68rem; font-weight: 500;
   letter-spacing: .08em; text-transform: uppercase;
   padding: .25rem .6rem; border-radius: var(--r-pill);
   background: var(--accent-tint); color: var(--accent-edge);
@@ -292,7 +302,7 @@ a:hover { text-decoration-thickness: 2px; }
 table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: .9rem; }
 thead th {
   background: var(--band);
-  text-align: left; font-weight: 900; font-size: .74rem;
+  text-align: left; font-family: var(--mono); font-weight: 500; font-size: .74rem;
   letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint);
   padding: .75rem 1rem; border-bottom: 2px solid var(--line);
   white-space: nowrap;
@@ -302,9 +312,9 @@ tbody td {
   color: var(--ink-soft); vertical-align: top;
 }
 tbody tr:last-child td { border-bottom: 0; }
-tbody td:first-child { color: var(--ink); font-weight: 800; }
+tbody td:first-child { color: var(--ink); font-weight: 600; }
 code {
-  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-family: var(--mono); font-weight: 500;
   font-size: .85em; background: var(--band);
   border: 1px solid var(--line); border-radius: 6px;
   padding: .1rem .35rem; color: var(--ink);
@@ -341,7 +351,7 @@ code {
 .appcard code { font-size: .78rem; }
 .appcard__go {
   margin-top: auto; padding-top: .6rem;
-  font-weight: 900; font-size: .9rem;
+  font-weight: 600; font-size: .9rem;
   color: var(--tone-edge, var(--indigo-edge));
 }
 
@@ -358,7 +368,7 @@ code {
   display: flex; flex-wrap: wrap; gap: 1rem;
   justify-content: space-between; align-items: center;
 }
-.foot__brand { font-weight: 900; font-size: 1.05rem; }
+.foot__brand { font-weight: 600; font-size: 1.05rem; }
 .foot__note { color: var(--ink-faint); font-size: .87rem; }
 
 @media print {
@@ -369,7 +379,7 @@ code {
 
 /* The NRDDA wordmark: Syne, lower case, a green full stop. */
 .brand__word {
-  font-family: "Syne", "Nunito", system-ui, sans-serif;
+  font-family: var(--wordmark);
   font-weight: 800; font-size: 1.6rem; letter-spacing: -0.05em; line-height: 1;
   color: #0D1117;
 }
