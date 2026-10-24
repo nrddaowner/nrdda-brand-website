@@ -11,28 +11,28 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
 <link rel="stylesheet" href="policy.css">
 </head>
-<body style="--accent: var(--indigo); --accent-edge: var(--indigo-edge); --accent-tint: var(--indigo-tint);">
+<body>
 
-<a class="skip-link" href="#doc">Skip to policy</a>
+<a class="skip" href="#doc">Skip to policy</a>
 
-<header class="topbar">
-  <div class="topbar__inner">
-    <a class="brand" href="../index.html">
-      <span class="brand__word">nrdda<span>.</span></span>
-    </a>
-    <nav class="topbar__links" aria-label="Privacy policies">
-      <a href="index.html">All policies</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="wordmark wordmark--sm" href="../index.html" aria-label="NRDDA home">nrdda<span>.</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../index.html#apps">Apps</a>
+      <a href="../index.html#work">Engineering</a>
       <a href="../index.html#support">Support</a>
-      <a href="mailto:nrdda.owner@gmail.com">Contact</a>
+      <a class="btn btn--ink btn--sm" href="../index.html#contact">Start a project</a>
     </nav>
   </div>
 </header>
 
 <section class="masthead">
   <div class="shell">
-    <span class="eyebrow">🧠 Privacy policy</span>
+    <span class="eyebrow">Privacy policy</span>
     <h1>NEET AI</h1>
     <p class="masthead__lede">
       How NEET AI collects, uses, stores, and protects your information when you use the
@@ -102,7 +102,7 @@
         needed it. Nothing here is collected for resale or for profiling you across other apps.
       </p>
 
-      <div class="card card--accent">
+      <div class="card">
         <div class="card__head"><span class="tag">Account</span><h3>Registration and sign-in</h3></div>
         <p>
           <strong>Collected:</strong> first name, last name, email address, and a password (transmitted over
@@ -120,8 +120,8 @@
         </p>
       </div>
 
-      <div class="card card--accent">
-        <div class="card__head"><span class="tag tag--sky">Learning data</span><h3>Study activity and progress</h3></div>
+      <div class="card">
+        <div class="card__head"><span class="tag">Learning data</span><h3>Study activity and progress</h3></div>
         <p>
           <strong>Collected:</strong> practice question attempts and correctness, mock test submissions and
           scores, flashcard reviews, lesson and chapter completion, study streaks, gem/coin balance,
@@ -133,8 +133,8 @@
         </p>
       </div>
 
-      <div class="card card--accent">
-        <div class="card__head"><span class="tag tag--grape">Social</span><h3>Squads and leaderboards</h3></div>
+      <div class="card">
+        <div class="card__head"><span class="tag">Social</span><h3>Squads and leaderboards</h3></div>
         <p>
           <strong>Collected:</strong> squad membership, squad join codes, and the scores you contribute.
         </p>
@@ -146,8 +146,8 @@
         <p><strong>Purpose:</strong> group study features and competitive ranking. These features are optional.</p>
       </div>
 
-      <div class="card card--accent">
-        <div class="card__head"><span class="tag tag--grass">Notifications</span><h3>Push messaging</h3></div>
+      <div class="card">
+        <div class="card__head"><span class="tag">Notifications</span><h3>Push messaging</h3></div>
         <p>
           <strong>Collected:</strong> a Firebase Cloud Messaging (FCM) device token, registered against your
           account and deleted when you sign out or uninstall.
@@ -159,8 +159,8 @@
         </p>
       </div>
 
-      <div class="card card--accent">
-        <div class="card__head"><span class="tag tag--coral">Payments</span><h3>Purchases</h3></div>
+      <div class="card">
+        <div class="card__head"><span class="tag">Payments</span><h3>Purchases</h3></div>
         <p>
           <strong>Collected by us:</strong> order identifiers, the plan or gem pack purchased, transaction
           status, and your resulting entitlement (what the account is allowed to access).
@@ -172,7 +172,7 @@
         </p>
       </div>
 
-      <div class="card card--accent">
+      <div class="card">
         <div class="card__head"><span class="tag">Diagnostics</span><h3>Analytics and device data</h3></div>
         <p>
           <strong>Collected:</strong> anonymous Firebase app-instance ID, screen and feature usage events,
@@ -185,8 +185,8 @@
         </p>
       </div>
 
-      <div class="card card--accent">
-        <div class="card__head"><span class="tag tag--coral">Advertising</span><h3>Google AdMob</h3></div>
+      <div class="card">
+        <div class="card__head"><span class="tag">Advertising</span><h3>Google AdMob</h3></div>
         <p>
           The Android app integrates the Google Mobile Ads SDK to show occasional ads to users on the free
           tier. Where ads are served, Google may collect your <strong>Advertising ID (GAID)</strong>, IP address,
@@ -423,7 +423,7 @@
 
     <section id="contact">
       <h2>12. Contact</h2>
-      <div class="card card--accent">
+      <div class="card">
         <p><strong>Publisher:</strong> NRDDA Tech, Hyderabad, India</p>
         <p><strong>App:</strong> NEET AI (<code>com.nrdda.ira</code>)</p>
         <p><strong>Data protection contact:</strong> Dipak Chouhan</p>
@@ -438,13 +438,15 @@
   </main>
 </div>
 
-<footer class="foot">
-  <div class="foot__inner">
-    <div>
-      <div class="foot__brand brand__word">nrdda<span>.</span></div>
-      <p class="foot__note">Dipak Chouhan · Hyderabad, India</p>
-    </div>
-    <p class="foot__note">© 2026 NRDDA Tech · <a href="index.html">All privacy policies</a></p>
+<footer class="site-foot">
+  <div class="wrap">
+    <a class="wordmark" href="../index.html" style="font-size: 22px;" aria-label="NRDDA home">nrdda<span>.</span></a>
+    <nav aria-label="Footer">
+      <a href="../index.html#apps">All apps</a>
+      <a href="../index.html#support">Support</a>
+      <a href="index.html">All privacy policies</a>
+    </nav>
+    <span class="legal">© 2026 NRDDA Tech</span>
   </div>
 </footer>
 

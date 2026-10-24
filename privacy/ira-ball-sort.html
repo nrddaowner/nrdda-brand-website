@@ -11,28 +11,28 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
 <link rel="stylesheet" href="policy.css">
 </head>
-<body style="--accent: var(--sky); --accent-edge: var(--sky-edge); --accent-tint: var(--sky-tint);">
+<body>
 
-<a class="skip-link" href="#doc">Skip to policy</a>
+<a class="skip" href="#doc">Skip to policy</a>
 
-<header class="topbar">
-  <div class="topbar__inner">
-    <a class="brand" href="../index.html">
-      <span class="brand__word">nrdda<span>.</span></span>
-    </a>
-    <nav class="topbar__links" aria-label="Privacy policies">
-      <a href="index.html">All policies</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="wordmark wordmark--sm" href="../index.html" aria-label="NRDDA home">nrdda<span>.</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../index.html#apps">Apps</a>
+      <a href="../index.html#work">Engineering</a>
       <a href="../index.html#support">Support</a>
-      <a href="mailto:nrdda.owner@gmail.com">Contact</a>
+      <a class="btn btn--ink btn--sm" href="../index.html#contact">Start a project</a>
     </nav>
   </div>
 </header>
 
 <section class="masthead">
   <div class="shell">
-    <span class="eyebrow">🧪 Privacy policy</span>
+    <span class="eyebrow">Privacy policy</span>
     <h1>IRA Ball Sort</h1>
     <p class="masthead__lede">
       A colour-sorting puzzle you can play without ever telling us who you are. This policy covers
@@ -96,8 +96,8 @@
         those collect the following:
       </p>
 
-      <div class="card card--accent">
-        <div class="card__head"><span class="tag tag--grass">On device</span><h3>Your game progress</h3></div>
+      <div class="card">
+        <div class="card__head"><span class="tag">On device</span><h3>Your game progress</h3></div>
         <p>
           <strong>Stored:</strong> levels cleared, stars earned, coin balance, unlocked skins and themes, daily
           streak state, and your sound, haptics, and ad preferences.
@@ -109,8 +109,8 @@
         </p>
       </div>
 
-      <div class="card card--accent">
-        <div class="card__head"><span class="tag tag--coral">Advertising</span><h3>Google AdMob</h3></div>
+      <div class="card">
+        <div class="card__head"><span class="tag">Advertising</span><h3>Google AdMob</h3></div>
         <p>
           The game shows <strong>interstitial ads</strong> between levels and optional <strong>rewarded video ads</strong>
           you can watch in exchange for coins or hints. A consent notice is shown before ads begin, and you
@@ -128,7 +128,7 @@
         </p>
       </div>
 
-      <div class="card card--accent">
+      <div class="card">
         <div class="card__head"><span class="tag">Analytics</span><h3>Firebase Analytics and Remote Config</h3></div>
         <p>
           <strong>Data collected:</strong> an anonymous app-instance ID, gameplay events (levels cleared, stars
@@ -141,8 +141,8 @@
         </p>
       </div>
 
-      <div class="card card--accent">
-        <div class="card__head"><span class="tag tag--grape">Diagnostics</span><h3>Firebase Crashlytics</h3></div>
+      <div class="card">
+        <div class="card__head"><span class="tag">Diagnostics</span><h3>Firebase Crashlytics</h3></div>
         <p>
           <strong>Data collected:</strong> crash stack traces, memory state at the time of the crash, device
           orientation, device model, OS version, and technical log messages.
@@ -157,8 +157,8 @@
         Neither of the following happens unless you choose it. Skipping both leaves the game fully playable.
       </p>
 
-      <div class="card card--accent">
-        <div class="card__head"><span class="tag tag--sky">Optional</span><h3>Google Play Games — cloud save, leaderboards, achievements</h3></div>
+      <div class="card">
+        <div class="card__head"><span class="tag">Optional</span><h3>Google Play Games — cloud save, leaderboards, achievements</h3></div>
         <p>
           <strong>Data collected:</strong> your Play Games player ID, gamer handle or display name, achievement
           unlock status, high-score metrics, and encrypted game-save snapshots.
@@ -174,8 +174,8 @@
         </p>
       </div>
 
-      <div class="card card--accent">
-        <div class="card__head"><span class="tag tag--grape">Optional</span><h3>Google Play Billing — in-app purchases</h3></div>
+      <div class="card">
+        <div class="card__head"><span class="tag">Optional</span><h3>Google Play Billing — in-app purchases</h3></div>
         <p>
           The game offers optional purchases, such as removing ad breaks and buying coin packs.
         </p>
@@ -331,7 +331,7 @@
 
     <section id="contact">
       <h2>11. Contact</h2>
-      <div class="card card--accent">
+      <div class="card">
         <p><strong>Publisher:</strong> NRDDA Tech, Hyderabad, India</p>
         <p><strong>App:</strong> IRA Ball Sort (<code>com.nrdda.irasort</code>)</p>
         <p><strong>Data protection contact:</strong> Dipak Chouhan</p>
@@ -342,13 +342,15 @@
   </main>
 </div>
 
-<footer class="foot">
-  <div class="foot__inner">
-    <div>
-      <div class="foot__brand brand__word">nrdda<span>.</span></div>
-      <p class="foot__note">Dipak Chouhan · Hyderabad, India</p>
-    </div>
-    <p class="foot__note">© 2026 NRDDA Tech · <a href="index.html">All privacy policies</a></p>
+<footer class="site-foot">
+  <div class="wrap">
+    <a class="wordmark" href="../index.html" style="font-size: 22px;" aria-label="NRDDA home">nrdda<span>.</span></a>
+    <nav aria-label="Footer">
+      <a href="../index.html#apps">All apps</a>
+      <a href="../index.html#support">Support</a>
+      <a href="index.html">All privacy policies</a>
+    </nav>
+    <span class="legal">© 2026 NRDDA Tech</span>
   </div>
 </footer>
 
