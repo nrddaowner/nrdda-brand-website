@@ -81,9 +81,18 @@ code { font-family: var(--mono); font-weight: 500; font-size: 0.85em; color: var
 
 .site-foot { border-top: 1px solid var(--line); }
 
+.doc a { overflow-wrap: anywhere; }
+
 @media (max-width: 640px) {
   .masthead { padding-block: 40px 36px; }
+  .masthead__lede { font-size: 17px; }
   .layout { padding-block: 40px 64px; }
+  .card, .keypoints, .note { padding: 18px; }
+  .appcard { padding: 22px; }
+  .appgrid { padding-block: 40px; }
+}
+@media (max-width: 360px) {
+  .shell { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 }
 @media print {
   .site-head, .toc, .skip { display: none; }
