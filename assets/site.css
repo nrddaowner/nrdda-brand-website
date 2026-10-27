@@ -142,6 +142,7 @@ p { margin: 0; }
 .shots { scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
 .shots__row { display: grid; grid-template-columns: repeat(4, minmax(200px, 1fr)); gap: 20px; min-width: 860px; }
 .shots__row > * { scroll-snap-align: start; }
+.shots__row--8 { grid-template-columns: repeat(8, minmax(200px, 1fr)); min-width: 1740px; }
 .shots img { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 18px; border: 1px solid var(--line); background: #fff; }
 .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 0 40px; }
 .features > div { border-top: 1px solid var(--line); padding: 22px 0; }
