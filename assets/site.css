@@ -97,6 +97,15 @@ p { margin: 0; }
 .app p { color: var(--ink-2); flex: 1; }
 .app__links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; }
 .app__links a:not(.btn) { font-weight: 600; font-size: 15px; }
+/* each app's mascot peeks over the top edge of its card */
+.apps:has(.app--mascot) { row-gap: 64px; padding-top: 44px; }
+.app--mascot { position: relative; }
+.app__mascot { position: absolute; z-index: -1; right: 22px; top: -76px; width: 92px; height: 92px; object-fit: contain; object-position: bottom; pointer-events: none; animation: mascot-bob 3.6s ease-in-out infinite; transform-origin: 50% 100%; }
+.app--mascot:nth-child(2n) .app__mascot { animation-delay: -1.2s; }
+.app--mascot:nth-child(3n) .app__mascot { animation-delay: -2.4s; }
+.app--mascot .app__top { padding-right: 70px; }
+@keyframes mascot-bob { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-5px) rotate(-2deg); } }
+.mascot { width: clamp(120px, 16vw, 170px); height: auto; flex: none; animation: mascot-bob 3.6s ease-in-out infinite; transform-origin: 50% 100%; }
 .app--invite { border-style: dashed; border-width: 1.5px; border-color: #C9CED6; background: var(--soft); justify-content: center; }
 
 /* stack */
@@ -172,6 +181,9 @@ p { margin: 0; }
   .proof__item { padding: 20px 16px 20px 0; }
   .proof__n { font-size: 28px; }
   .app { padding: 22px; }
+  .apps:has(.app--mascot) { row-gap: 56px; padding-top: 36px; }
+  .app__mascot { width: 76px; height: 76px; top: -64px; right: 16px; }
+  .app--mascot .app__top { padding-right: 52px; }
   .stack__group { padding: 22px; }
   .band-ink .wrap { padding-block: 72px; }
   .band-ink .btn { max-width: 100%; white-space: normal; text-align: center; }
@@ -189,4 +201,4 @@ p { margin: 0; }
 @media (max-width: 340px) {
   .site-nav { flex-basis: 100%; margin-left: 0; justify-content: space-between; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } .app__mascot, .mascot { animation: none; } }
