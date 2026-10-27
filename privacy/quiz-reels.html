@@ -41,7 +41,7 @@
       each of those off.
     </p>
     <div class="appmeta">
-      <span class="metapill">Effective <b>23 October 2026</b></span>
+      <span class="metapill">Effective <b>27 October 2026</b></span>
       <span class="metapill">Package <b>com.nrdda.quizreels</b></span>
       <span class="metapill">Publisher <b>NRDDA Tech</b></span>
       <span class="metapill">Platform <b>Android</b></span>
@@ -86,6 +86,7 @@
           <li><strong>No account, no sign-in.</strong> We never ask for your email address, phone number, photos or location.</li>
           <li><strong>Your study progress stays on your phone, encrypted.</strong> Answers, streaks, saved cards and settings are sealed with a key held in Android&rsquo;s hardware-backed Keystore.</li>
           <li><strong>We run no server for this app</strong> and it contains no analytics or crash-reporting SDK. Anything that leaves your device goes to a Google service, never to a server of ours.</li>
+          <li><strong>Reminders are worked out on your phone.</strong> Which reminder you get, and its words, come from your progress on the device. Only &ldquo;new topic&rdquo; messages come from Google&rsquo;s Firebase Cloud Messaging, and you can switch them off.</li>
           <li><strong>The app is ad-supported.</strong> Ads come from Google AdMob. A one-time purchase, <strong>Ad-free</strong>, removes the ads in the feed. No study feature is ever locked behind it.</li>
           <li><strong>We never sell your personal information</strong>, to anyone.</li>
         </ul>
@@ -123,11 +124,21 @@
       </div>
 
       <div class="card">
-        <div class="card__head"><span class="tag">On device only</span><h3>Daily reminder</h3></div>
+        <div class="card__head"><span class="tag">On device only</span><h3>Study reminders</h3></div>
         <p>
-          The daily study reminder is scheduled <strong>locally on your phone</strong> at the time you pick.
-          There is no push-notification server and no notification token is sent anywhere. You can turn
-          it off in the App or in Android&rsquo;s notification settings.
+          Reminders are off until you turn them on, and Android asks for your permission first. Once on,
+          they are scheduled <strong>locally on your phone</strong>: one a day at the time you pick, plus at
+          most one evening reminder when a streak of three days or more would break that night.
+        </p>
+        <p>
+          Which reminder you get (for example questions due for revision, your streak, a weekly summary or
+          a question of the day) and the numbers in it are worked out on your phone from your study
+          progress. None of this is sent anywhere. The App also notes the last day it was opened, so it can
+          stop reminding you after 30 days away.
+        </p>
+        <p>
+          Turn reminders off in the App (Settings &rsaquo; Notifications) or in Android&rsquo;s notification
+          settings.
         </p>
       </div>
 
@@ -179,7 +190,7 @@
         <div class="card__head"><span class="tag">App settings</span><h3>Firebase Remote Config</h3></div>
         <p>
           The App checks Firebase Remote Config about twice a day for a few settings, such as how often an
-          ad card appears in the feed and when Ad-free is offered. This lets us tune ad frequency without
+          ad card appears in the feed, when Ad-free is offered, and whether a newer version of the App is out. This lets us tune ad frequency without
           shipping an update.
         </p>
         <p>
@@ -190,6 +201,24 @@
         <p>
           <strong>Not collected:</strong> your answers, scores, progress or anything you type. Remote Config
           sends settings to the App; it does not receive your study data.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card__head"><span class="tag">Messages</span><h3>Firebase Cloud Messaging</h3></div>
+        <p>
+          We use Firebase Cloud Messaging to send occasional messages to everyone who uses the App, such as
+          &ldquo;a new topic has been added&rdquo;. Messages go to a topic for your App language (Hindi or
+          English), not to you personally, and we do not keep a list of devices.
+        </p>
+        <p>
+          <strong>Data processed:</strong> a Firebase installation ID and a messaging token (random
+          identifiers for this install of the App, not linked to you), the App version and basic device
+          information, which Google needs to deliver the message.
+        </p>
+        <p>
+          <strong>Turning it off:</strong> switch off <strong>New topics</strong> in Settings &rsaquo; Notifications,
+          and the App leaves the topic. Android&rsquo;s notification settings also stop them.
         </p>
       </div>
     </section>
@@ -244,10 +273,11 @@
             <tr><th scope="col">Permission</th><th scope="col">Why the App needs it</th></tr>
           </thead>
           <tbody>
-            <tr><td><code>INTERNET</code></td><td>Loading ads, app settings from Remote Config, and processing purchases. Questions are built into the App and work offline.</td></tr>
+            <tr><td><code>INTERNET</code></td><td>Loading ads, app settings from Remote Config, new-topic messages, and processing purchases. Questions are built into the App and work offline.</td></tr>
             <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Checking whether you are online before asking for an ad. Added by the Google Mobile Ads SDK.</td></tr>
-            <tr><td><code>POST_NOTIFICATIONS</code></td><td>Showing the local daily reminder on Android 13 and newer. Android asks you first.</td></tr>
-            <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Re-scheduling your local reminder after the phone restarts.</td></tr>
+            <tr><td><code>POST_NOTIFICATIONS</code></td><td>Showing reminders and new-topic messages on Android 13 and newer. Android asks you first, only when you turn reminders on.</td></tr>
+            <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Re-scheduling your local reminders after the phone restarts.</td></tr>
+            <tr><td><code>c2dm.permission.RECEIVE</code></td><td>Receiving new-topic messages from Firebase Cloud Messaging. Added by the Firebase SDK.</td></tr>
             <tr><td><code>AD_ID</code></td><td>Letting AdMob read the Advertising ID, according to your consent and device settings. Added by the Google Mobile Ads SDK.</td></tr>
             <tr><td><code>ACCESS_ADSERVICES_*</code></td><td>Letting AdMob use Android&rsquo;s Privacy Sandbox ad APIs where your phone supports them. Added by the Google Mobile Ads SDK.</td></tr>
             <tr><td><code>BILLING</code></td><td>Buying Ad-free through Google Play.</td></tr>
@@ -273,7 +303,7 @@
           </thead>
           <tbody>
             <tr><td>Device or other IDs (Advertising ID)</td><td>AdMob</td><td>Yes, with ad partners through AdMob</td><td>Advertising, fraud prevention</td></tr>
-            <tr><td>Device or other IDs (Firebase installation ID)</td><td>Firebase Remote Config</td><td>No</td><td>App functionality</td></tr>
+            <tr><td>Device or other IDs (Firebase installation ID, messaging token)</td><td>Firebase Remote Config, Firebase Cloud Messaging</td><td>No</td><td>App functionality</td></tr>
             <tr><td>Approximate location (from IP address)</td><td>AdMob</td><td>Yes, through AdMob</td><td>Advertising, fraud prevention</td></tr>
             <tr><td>App interactions (ad views and taps)</td><td>AdMob</td><td>No</td><td>Advertising, analytics</td></tr>
             <tr><td>Diagnostics (ad SDK performance)</td><td>AdMob</td><td>No</td><td>Fraud prevention, ad delivery</td></tr>
@@ -301,7 +331,7 @@
         <li><strong>Ad consent:</strong> clear the App&rsquo;s data to see Google&rsquo;s consent form again (shown where consent applies).</li>
         <li><strong>Advertising ID:</strong> reset or delete it in Android Settings &rsaquo; Google &rsaquo; Ads.</li>
         <li><strong>Remove ads:</strong> buy Ad-free from the crown on the Home screen.</li>
-        <li><strong>Reminders:</strong> turn them off in the App or in Android&rsquo;s notification settings.</li>
+        <li><strong>Reminders and new-topic messages:</strong> turn each off in the App (Settings &rsaquo; Notifications) or all of them in Android&rsquo;s notification settings.</li>
         <li><strong>Local study data:</strong> Android Settings &rsaquo; Apps &rsaquo; Quiz Reels &rsaquo; Storage &rsaquo; <strong>Clear data</strong>, or uninstall the App.</li>
         <li>
           <strong>Access or deletion requests:</strong> email us. We hold no personal data about you ourselves, so
