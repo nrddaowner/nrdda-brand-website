@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — Sky Spark | NRDDA</title>
-  <meta name="description" content="Privacy policy for Sky Spark: Fireworks Puzzle (com.nrdda.skyspark) by NRDDA Tech: no account required, progress saved on your device, ads by Google AdMob, one optional Google Play purchase, no analytics.">
+  <meta name="description" content="Privacy policy for Sky Spark: Fireworks Puzzle (com.nrdda.skyspark) by NRDDA Tech: no account required, progress saved on your device, ads by Google AdMob, one optional Google Play purchase, optional reminders worked out on your phone, a backup file you keep, no analytics.">
   <meta name="theme-color" content="#ffffff">
   <link rel="canonical" href="https://nrdda.com/privacy/sky-spark.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,6 +80,8 @@
           <li><strong>No account, ever.</strong> We never ask for your name, email address, phone number, photos or location.</li>
           <li><strong>Your progress stays on your phone.</strong> Levels, boosters and settings are stored in the App&rsquo;s private storage.</li>
           <li><strong>We run no server for this game</strong> and the App contains no analytics, crash-reporting or Firebase SDK. Anything that leaves your device goes to a Google service, never to a server of ours.</li>
+          <li><strong>Reminders are worked out on your phone.</strong> When they arrive and what they say come from your progress on the device. There is no push server, and you can switch them off.</li>
+          <li><strong>Backups are a file you keep.</strong> Save backup writes a small file wherever you choose; we never receive it.</li>
           <li><strong>The game is ad-supported.</strong> Ads come from Google AdMob. A one-time purchase, No Ads, removes the banner and the ads between levels.</li>
           <li><strong>We never sell your personal information</strong>, to anyone.</li>
         </ul>
@@ -103,6 +105,48 @@
         <p>
           <strong>Removing it:</strong> Settings &rsaquo; Start over in the game resets your progress; clearing
           the App&rsquo;s data or uninstalling deletes all of it. We have no copy.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card__head"><span class="tag">On device only</span><h3>Reminders</h3></div>
+        <p>
+          The game can remind you to play: once the day after you last played, and at most three more times
+          (after 2, 7 and 14 days) if you stay away, then never again. Android asks for your permission
+          first, and nothing is posted between 10 pm and 8 am.
+        </p>
+        <p>
+          Reminders are scheduled <strong>locally on your phone</strong>. To time them and fill in their words
+          (your next level, your world and how much of it is lit), the App keeps the time you last opened
+          it and the hour you usually play. There is no push-notification server and no notification token
+          is sent anywhere.
+        </p>
+        <p>
+          Turn them off with <strong>Settings &rsaquo; Remind</strong> in the game, or in Android&rsquo;s
+          notification settings.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card__head"><span class="tag">Your file</span><h3>Backup file</h3></div>
+        <p>
+          <strong>Settings &rsaquo; Save backup</strong> writes a small file with your next level, booster counts,
+          misses per level and how many pieces you have met. Android&rsquo;s own file picker lets you choose
+          where it goes, such as your phone&rsquo;s storage or a cloud drive you already use; if you pick a cloud
+          drive, that provider&rsquo;s terms apply to the file.
+        </p>
+        <p>
+          <strong>Restore backup</strong> reads a file you pick and asks before replacing your progress. The App
+          opens only files you choose, and we never receive a copy. No Ads is not in the file; Restore
+          purchases brings it back through Google Play.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card__head"><span class="tag">On device only</span><h3>Home-screen widgets</h3></div>
+        <p>
+          If you add a Sky Spark widget, it shows your next level or your current world, drawn on your phone
+          from the progress above. It refreshes about twice a day and sends nothing anywhere.
         </p>
       </div>
     </section>
@@ -131,6 +175,19 @@
           <strong>Purpose:</strong> showing ads, measuring them, limiting how often you see the same ad, and
           preventing fraud. Whether ads are personalised depends on your consent choice (see
           <a href="#consent">section 05</a>) and your device&rsquo;s ad settings.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card__head"><span class="tag">Updates</span><h3>Google Play In-App Updates</h3></div>
+        <p>
+          The App asks Google Play, on your phone, whether a newer version of the game is out. If one is, it
+          may show a panel on Home (at most every few days) and one notification per new version, and the
+          Update button hands over to Google Play. You can always choose Later.
+        </p>
+        <p>
+          <strong>Data processed:</strong> the check is handled by the Google Play Store app already on your phone,
+          under Google&rsquo;s privacy policy. It does not send your game progress anywhere.
         </p>
       </div>
     </section>
@@ -182,9 +239,11 @@
             <tr><th scope="col">Permission</th><th scope="col">Why the App needs it</th></tr>
           </thead>
           <tbody>
-            <tr><td><code>INTERNET</code></td><td>Loading ads and processing purchases.</td></tr>
+            <tr><td><code>INTERNET</code></td><td>Loading ads, processing purchases, and checking Google Play for a newer version.</td></tr>
             <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Checking whether you are online, so the game keeps working offline.</td></tr>
             <tr><td><code>VIBRATE</code></td><td>Haptic feedback when fireworks burst. Can be turned off in Settings.</td></tr>
+            <tr><td><code>POST_NOTIFICATIONS</code></td><td>Showing reminders and the new-version notice on Android 13 and newer. Android asks you first.</td></tr>
+            <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Re-scheduling your local reminders after the phone restarts.</td></tr>
             <tr><td><code>BILLING</code></td><td>Buying and restoring No Ads through Google Play.</td></tr>
             <tr><td><code>AD_ID</code></td><td>Letting AdMob read the Advertising ID, according to your consent and device settings. Added by the Google Mobile Ads SDK.</td></tr>
           </tbody>
@@ -192,7 +251,7 @@
       </div>
       <p>
         The App does <strong>not</strong> request access to your contacts, SMS, call log, camera, microphone,
-        photos, files, notifications or location.
+        photos, files or location. Backups use Android&rsquo;s file picker, which opens only the file you choose.
       </p>
     </section>
 
@@ -235,6 +294,8 @@
         <li><strong>Ad consent:</strong> open the game and go to <strong>Settings &rsaquo; Privacy options</strong> (shown where consent applies).</li>
         <li><strong>Advertising ID:</strong> reset or delete it in Android Settings &rsaquo; Google &rsaquo; Ads.</li>
         <li><strong>Remove ads:</strong> buy No Ads from the Shop.</li>
+        <li><strong>Reminders:</strong> turn them off with Settings &rsaquo; Remind in the game, or in Android&rsquo;s notification settings.</li>
+        <li><strong>Backup files:</strong> they are yours; delete them wherever you saved them.</li>
         <li><strong>Local game data:</strong> Settings &rsaquo; Start over in the game, or Android Settings &rsaquo; Apps &rsaquo; Sky Spark &rsaquo; Storage &rsaquo; <strong>Clear data</strong>, or uninstall the App.</li>
         <li>
           <strong>Access or deletion requests:</strong> email us. We hold no personal data about you ourselves, so
@@ -253,6 +314,7 @@
         <li><strong>On device:</strong> game data is kept in the App&rsquo;s private storage, protected by Android&rsquo;s app sandbox.</li>
         <li><strong>Ads and purchases:</strong> kept by Google (AdMob and Google Play) under its own retention policies.</li>
         <li><strong>Local data:</strong> kept until you clear it or uninstall the App.</li>
+        <li><strong>Backup files:</strong> kept where you saved them until you delete them; uninstalling the App does not remove them.</li>
       </ul>
       <p>No system is completely secure, but we use the protections above and collect as little as we can.</p>
     </section>
