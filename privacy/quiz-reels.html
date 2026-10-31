@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — Quiz Reels | NRDDA</title>
-<meta name="description" content="Privacy policy for Quiz Reels (com.nrdda.quizreels) by NRDDA Tech: no account required, study progress encrypted on your device, ads by Google AdMob, optional Ad-free purchase through Google Play.">
+<meta name="description" content="Privacy policy for Quiz Reels (com.nrdda.quizreels) by NRDDA Tech: no sign-in required, study progress encrypted on your device, points and leaderboard on our own server, optional email sign-in, ads by Google AdMob, optional QuizReels Gold purchase through Google Play.">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://nrdda.com/privacy/quiz-reels.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,12 +36,12 @@
     <h1>Quiz Reels</h1>
     <p class="masthead__lede">
       Swipe-style GK and English practice for SSC exams that you can use from the first reel without
-      telling us who you are. This policy explains what the app keeps on your phone, what Google&rsquo;s
-      services collect when they show ads, deliver settings or process a purchase, and how to switch
-      each of those off.
+      telling us who you are. This policy explains what the app keeps on your phone, what it sends to our
+      own server for points and the leaderboard, what Google&rsquo;s services collect when they show ads,
+      deliver settings or process a purchase, and how to switch each of those off or delete it.
     </p>
     <div class="appmeta">
-      <span class="metapill">Effective <b>27 October 2026</b></span>
+      <span class="metapill">Effective <b>1 November 2026</b></span>
       <span class="metapill">Package <b>com.nrdda.quizreels</b></span>
       <span class="metapill">Publisher <b>NRDDA Tech</b></span>
       <span class="metapill">Platform <b>Android</b></span>
@@ -56,8 +56,9 @@
     <ol>
       <li><a href="#overview">Overview</a></li>
       <li><a href="#device">On your device</a></li>
+      <li><a href="#server">Our server</a></li>
       <li><a href="#google">Google services</a></li>
-      <li><a href="#optional">Optional features</a></li>
+      <li><a href="#optional">Optional purchase</a></li>
       <li><a href="#consent">Ad consent</a></li>
       <li><a href="#permissions">Permissions</a></li>
       <li><a href="#data-safety">Data Safety map</a></li>
@@ -83,11 +84,12 @@
       <div class="keypoints">
         <h3>Key takeaways</h3>
         <ul>
-          <li><strong>No account, no sign-in.</strong> We never ask for your email address, phone number, photos or location.</li>
-          <li><strong>Your study progress stays on your phone, encrypted.</strong> Answers, streaks, saved cards and settings are sealed with a key held in Android&rsquo;s hardware-backed Keystore.</li>
-          <li><strong>We run no server for this app</strong> and it contains no analytics or crash-reporting SDK. Anything that leaves your device goes to a Google service, never to a server of ours.</li>
+          <li><strong>No sign-in needed.</strong> Every question works without one. Signing in with your email is optional and only puts you on the leaderboard and keeps your points across phones. We never ask for your phone number, photos or location.</li>
+          <li><strong>Your study progress stays on your phone, encrypted.</strong> Answers, streaks, saved cards and settings are stored encrypted, inside the App&rsquo;s private storage.</li>
+          <li><strong>Points and the leaderboard run on our own server.</strong> It receives the answers it needs to award points, an anonymous player ID, and, only if you sign in, your email and the name you show on the board. The App contains no analytics or crash-reporting SDK.</li>
+          <li><strong>Cloud backup comes only with QuizReels Gold.</strong> Without Gold, your study progress never leaves your phone.</li>
           <li><strong>Reminders are worked out on your phone.</strong> Which reminder you get, and its words, come from your progress on the device. Only &ldquo;new topic&rdquo; messages come from Google&rsquo;s Firebase Cloud Messaging, and you can switch them off.</li>
-          <li><strong>The app is ad-supported.</strong> Ads come from Google AdMob. A one-time purchase, <strong>Ad-free</strong>, removes the ads in the feed. No study feature is ever locked behind it.</li>
+          <li><strong>The app is ad-supported.</strong> Ads come from Google AdMob. A one-time purchase, <strong>QuizReels Gold</strong>, removes the ads and adds extras (automatic backup, characters, a crown on the leaderboard). No question or study feature is ever locked behind it.</li>
           <li><strong>We never sell your personal information</strong>, to anyone.</li>
         </ul>
       </div>
@@ -110,16 +112,15 @@
         </p>
         <p>
           <strong>Also on device:</strong> simple counters the App uses to pace itself, such as the day you
-          installed it and when it last offered Ad-free. These never leave your phone.
+          installed it and when it last offered QuizReels Gold. These never leave your phone.
         </p>
         <p>
-          <strong>Encryption:</strong> the study database is encrypted with SQLCipher and your profile with
-          AES-256-GCM, using a key that never leaves the Android Keystore. The App also opts out of
+          <strong>Encryption:</strong> this data is stored encrypted on your phone. The App also opts out of
           Android&rsquo;s automatic cloud backup, so these files are not copied off your phone.
         </p>
         <p>
-          <strong>Removing it:</strong> clearing the App&rsquo;s data or uninstalling deletes all of it. We have no
-          copy.
+          <strong>Removing it:</strong> clearing the App&rsquo;s data or uninstalling deletes all of it from your
+          phone. What our server holds (section 03) is deleted separately, as described there.
         </p>
       </div>
 
@@ -149,7 +150,7 @@
           pick, or hands it to an app you choose, such as a cloud drive, mail or a messaging app.
           <strong>Restore</strong> reads a file you pick. The App only touches the one file you choose and does
           not need access to your other files. A backup file is not encrypted, so keep it somewhere you
-          trust. Your Ad-free purchase is never stored in it; Google Play restores that.
+          trust. Your QuizReels Gold purchase is never stored in it; Google Play restores that.
         </p>
         <p>
           When you tap <strong>Share</strong>, the App creates an image of your result or a question card
@@ -158,8 +159,74 @@
       </div>
     </section>
 
+    <section id="server">
+      <h2>03. What our server receives</h2>
+      <p>
+        Points, the weekly leaderboard, optional sign-in and QuizReels Gold&rsquo;s cloud backup run on
+        a server operated by NRDDA Tech. All traffic to it uses HTTPS. We do not sell or share this data with anyone, and we do not use it
+        for advertising.
+      </p>
+
+      <div class="card">
+        <div class="card__head"><span class="tag">Automatic</span><h3>Anonymous player and points</h3></div>
+        <p>
+          When the App first connects, the server creates an <strong>anonymous player account</strong> for this
+          install. It has no name, email or phone number attached.
+        </p>
+        <p>
+          <strong>Data received:</strong> a random ID for this install, the App and Android version, and
+          your IP address (used to keep the service secure and prevent misuse).
+          For points, the App sends which question you answered, the option you picked and how long you took;
+          the server works out your points, streak
+          and weekly total.
+        </p>
+        <p>
+          <strong>Not received:</strong> your saved cards, reports, revision schedule, reminders or anything you
+          type, unless you use cloud backup below.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card__head"><span class="tag">Optional</span><h3>Sign in with email</h3></div>
+        <p>
+          You can sign in with your email address to appear on the leaderboard and keep your points on a new
+          phone. We email you a one-time code to confirm it is yours; there is no password.
+        </p>
+        <p>
+          <strong>Data received:</strong> your email address and the name you choose for the leaderboard.
+        </p>
+        <p>
+          <strong>Shown to other people:</strong> only on the leaderboard, your chosen name, your points and
+          rank, your character or letter, and a gold crown if you hold QuizReels Gold. Your email address is
+          never shown to anyone.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card__head"><span class="tag">QuizReels Gold</span><h3>Cloud backup and characters</h3></div>
+        <p>
+          With QuizReels Gold the App keeps a copy of your study progress on our server, so it comes back on a
+          new phone: the cards you answered, saved or liked and how well you know each, your daily totals and
+          streak days, your progress in each study set, your daily goal and your language choices. It syncs
+          when you open the App and while you study. The answer history, question reports and sprint results
+          stay on your phone.
+        </p>
+        <p>
+          The character or letter you pick is stored with your account so others see it on the leaderboard.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card__head"><span class="tag">Automatic</span><h3>Question packs</h3></div>
+        <p>
+          New questions are downloaded as files from our server. These downloads carry no
+          information about you beyond what any web request carries (such as your IP address).
+        </p>
+      </div>
+    </section>
+
     <section id="google">
-      <h2>03. What Google&rsquo;s services collect</h2>
+      <h2>04. What Google&rsquo;s services collect</h2>
       <p>
         The App uses the following Google services. Each receives data directly from your device under
         Google&rsquo;s own privacy policy, acting as a service provider to us.
@@ -182,7 +249,7 @@
         <p>
           <strong>Purpose:</strong> showing ads, measuring them, limiting how often you see the same ad, and
           preventing fraud. Whether ads are personalised depends on your consent choice (see
-          <a href="#consent">section 05</a>) and your device&rsquo;s ad settings.
+          <a href="#consent">section 06</a>) and your device&rsquo;s ad settings.
         </p>
       </div>
 
@@ -190,7 +257,8 @@
         <div class="card__head"><span class="tag">App settings</span><h3>Firebase Remote Config</h3></div>
         <p>
           The App checks Firebase Remote Config about twice a day for a few settings, such as how often an
-          ad card appears in the feed, when Ad-free is offered, and whether a newer version of the App is out. This lets us tune ad frequency without
+          ad card appears in the feed, when QuizReels Gold is offered, whether points and new question packs
+          are switched on, and whether a newer version of the App is out. This lets us tune these without
           shipping an update.
         </p>
         <p>
@@ -224,19 +292,21 @@
     </section>
 
     <section id="optional">
-      <h2>04. Optional features</h2>
-      <p>The following only happen if you choose them. Every study feature works without them.</p>
+      <h2>05. Optional purchase</h2>
+      <p>This only happens if you choose it. Every question and study feature works without it.</p>
 
       <div class="card">
         <div class="card__head"><span class="tag">Optional</span><h3>Purchases through Google Play</h3></div>
         <p>
-          The App sells one thing: <strong>Ad-free</strong>, a one-time purchase that removes the ads in the
-          feed. It does not unlock any questions or study features; those are free for everyone.
+          The App sells one thing: <strong>QuizReels Gold</strong>, a one-time purchase that removes the ads and
+          adds automatic cloud backup, characters, a crown on the leaderboard and saving your streak without an
+          ad. It does not unlock any questions; those are free for everyone.
         </p>
         <p>
           <strong>Data processed:</strong> product ID, purchase token, order ID and purchase status, used to give you
           what you bought and to restore it after a reinstall or on a new phone. The App checks this with
-          Google Play on each launch, so a refunded purchase brings ads back.
+          Google Play on each launch, and also sends the purchase token to our server, which confirms it
+          directly with Google Play before turning on the Gold features. A refunded purchase turns them off.
         </p>
         <p>
           <strong>Payment details:</strong> payments, including UPI, are handled entirely by Google Play. We
@@ -246,7 +316,7 @@
     </section>
 
     <section id="consent">
-      <h2>05. Ad consent</h2>
+      <h2>06. Ad consent</h2>
       <p>
         In places where the law requires your permission before ads can use your data, such as the
         European Economic Area, the United Kingdom and Switzerland, the App shows
@@ -266,21 +336,21 @@
     </section>
 
     <section id="permissions">
-      <h2>06. Android permissions</h2>
+      <h2>07. Android permissions</h2>
       <div class="tablewrap">
         <table>
           <thead>
             <tr><th scope="col">Permission</th><th scope="col">Why the App needs it</th></tr>
           </thead>
           <tbody>
-            <tr><td><code>INTERNET</code></td><td>Loading ads, app settings from Remote Config, new-topic messages, and processing purchases. Questions are built into the App and work offline.</td></tr>
+            <tr><td><code>INTERNET</code></td><td>Points and the leaderboard on our server, new question packs, optional sign-in and cloud backup, loading ads, app settings from Remote Config, new-topic messages, and processing purchases. The questions already on your phone work offline.</td></tr>
             <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Checking whether you are online before asking for an ad. Added by the Google Mobile Ads SDK.</td></tr>
             <tr><td><code>POST_NOTIFICATIONS</code></td><td>Showing reminders and new-topic messages on Android 13 and newer. Android asks you first, only when you turn reminders on.</td></tr>
             <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Re-scheduling your local reminders after the phone restarts.</td></tr>
             <tr><td><code>c2dm.permission.RECEIVE</code></td><td>Receiving new-topic messages from Firebase Cloud Messaging. Added by the Firebase SDK.</td></tr>
             <tr><td><code>AD_ID</code></td><td>Letting AdMob read the Advertising ID, according to your consent and device settings. Added by the Google Mobile Ads SDK.</td></tr>
             <tr><td><code>ACCESS_ADSERVICES_*</code></td><td>Letting AdMob use Android&rsquo;s Privacy Sandbox ad APIs where your phone supports them. Added by the Google Mobile Ads SDK.</td></tr>
-            <tr><td><code>BILLING</code></td><td>Buying Ad-free through Google Play.</td></tr>
+            <tr><td><code>BILLING</code></td><td>Buying QuizReels Gold through Google Play.</td></tr>
             <tr><td><code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code></td><td>Used internally by Google&rsquo;s libraries to finish short background tasks. Added by the Google SDKs.</td></tr>
           </tbody>
         </table>
@@ -292,7 +362,7 @@
     </section>
 
     <section id="data-safety">
-      <h2>07. Google Play Data Safety summary</h2>
+      <h2>08. Google Play Data Safety summary</h2>
       <div class="tablewrap">
         <table>
           <thead>
@@ -307,15 +377,19 @@
             <tr><td>Approximate location (from IP address)</td><td>AdMob</td><td>Yes, through AdMob</td><td>Advertising, fraud prevention</td></tr>
             <tr><td>App interactions (ad views and taps)</td><td>AdMob</td><td>No</td><td>Advertising, analytics</td></tr>
             <tr><td>Diagnostics (ad SDK performance)</td><td>AdMob</td><td>No</td><td>Fraud prevention, ad delivery</td></tr>
-            <tr><td>Purchase history</td><td>Google Play Billing</td><td>No</td><td>Delivering purchases (optional)</td></tr>
+            <tr><td>Purchase history</td><td>Google Play Billing, our server</td><td>No</td><td>Delivering purchases (optional)</td></tr>
+            <tr><td>Device or other IDs (install ID)</td><td>Our server</td><td>No</td><td>App functionality, fraud prevention</td></tr>
+            <tr><td>App activity (answers for points, progress for Gold backup)</td><td>Our server</td><td>No</td><td>App functionality</td></tr>
+            <tr><td>Personal info: email address</td><td>Our server, only if you sign in</td><td>No</td><td>Account management</td></tr>
+            <tr><td>Personal info: name you choose for the leaderboard</td><td>Our server, only if you sign in</td><td>No</td><td>App functionality (shown on the leaderboard)</td></tr>
           </tbody>
         </table>
       </div>
-      <p>All data is encrypted in transit. You can ask for your data to be deleted (see <a href="#rights">section 09</a>).</p>
+      <p>All data is encrypted in transit. You can ask for your data to be deleted (see <a href="#rights">section 10</a>).</p>
     </section>
 
     <section id="children">
-      <h2>08. Children</h2>
+      <h2>09. Children</h2>
       <p>
         Quiz Reels is made for adults preparing for competitive exams and is <strong>not directed at children
         under 13</strong>. We do not knowingly collect personal information from children under 13 (or the
@@ -326,17 +400,24 @@
     </section>
 
     <section id="rights">
-      <h2>09. Your rights and choices</h2>
+      <h2>10. Your rights and choices</h2>
       <ul>
         <li><strong>Ad consent:</strong> clear the App&rsquo;s data to see Google&rsquo;s consent form again (shown where consent applies).</li>
         <li><strong>Advertising ID:</strong> reset or delete it in Android Settings &rsaquo; Google &rsaquo; Ads.</li>
-        <li><strong>Remove ads:</strong> buy Ad-free from the crown on the Home screen.</li>
+        <li><strong>Remove ads:</strong> buy QuizReels Gold from the crown on the Home screen.</li>
+        <li><strong>Leaderboard name:</strong> change it any time in Settings by tapping your name.</li>
+        <li>
+          <strong>Delete your account:</strong> signed in, go to Settings &rsaquo; <strong>Delete account</strong>.
+          Your points, streak, leaderboard name, character and cloud backup are deleted from our server after
+          14 days; sign in again within those 14 days to cancel. Not signed in, email us and we will delete the anonymous player for
+          that install.
+        </li>
         <li><strong>Reminders and new-topic messages:</strong> turn each off in the App (Settings &rsaquo; Notifications) or all of them in Android&rsquo;s notification settings.</li>
         <li><strong>Local study data:</strong> Android Settings &rsaquo; Apps &rsaquo; Quiz Reels &rsaquo; Storage &rsaquo; <strong>Clear data</strong>, or uninstall the App.</li>
         <li>
-          <strong>Access or deletion requests:</strong> email us. We hold no personal data about you ourselves, so
-          we will tell you what the App stores on your phone and work with Google on anything held by AdMob,
-          Firebase or Google Play. We reply within 30 days, free of charge. This applies under India&rsquo;s
+          <strong>Access or deletion requests:</strong> email us. We will send you what our server holds about
+          you, delete it on request, tell you what the App stores on your phone, and work with Google on
+          anything held by AdMob, Firebase or Google Play. We reply within 30 days, free of charge. This applies under India&rsquo;s
           Digital Personal Data Protection Act 2023, the EU/UK GDPR and California&rsquo;s CCPA/CPRA, and we
           extend it to everyone wherever they live.
         </li>
@@ -344,10 +425,11 @@
     </section>
 
     <section id="retention">
-      <h2>10. Security and retention</h2>
+      <h2>11. Security and retention</h2>
       <ul>
-        <li><strong>In transit:</strong> all traffic to Google services uses HTTPS/TLS.</li>
-        <li><strong>On device:</strong> study data is encrypted (SQLCipher and AES-256-GCM, key in the Android Keystore) inside the App&rsquo;s private storage, protected by Android&rsquo;s app sandbox.</li>
+        <li><strong>In transit:</strong> all traffic to our server and to Google services uses HTTPS/TLS.</li>
+        <li><strong>Our server:</strong> your player account, points and (with Gold) cloud backup are kept while you use the App, and deleted 14 days after you delete your account.</li>
+        <li><strong>On device:</strong> study data is stored encrypted inside the App&rsquo;s private storage.</li>
         <li><strong>Backups:</strong> a backup file you create is kept wherever you saved or sent it, until you delete it.</li>
         <li><strong>Ads, settings and purchases:</strong> kept by Google under its own retention policies.</li>
         <li><strong>Local data:</strong> kept until you clear it or uninstall the App.</li>
@@ -356,16 +438,17 @@
     </section>
 
     <section id="changes">
-      <h2>11. Changes to this policy</h2>
+      <h2>12. Changes to this policy</h2>
       <p>
-        If the App starts collecting something new, such as an optional sign-in for cloud backup, this page
-        will be updated first, with a new effective date at the top. Significant changes will also be
+        If the App starts collecting something new, this page will be updated first, with a new effective
+        date at the top. The 1 November 2026 update added points and the leaderboard on our own server,
+        optional email sign-in, and QuizReels Gold (formerly Ad-free) with cloud backup. Significant changes will also be
         mentioned in the App&rsquo;s update notes.
       </p>
     </section>
 
     <section id="contact">
-      <h2>12. Contact</h2>
+      <h2>13. Contact</h2>
       <div class="card">
         <p><strong>Publisher:</strong> NRDDA Tech, Hyderabad, Telangana, India</p>
         <p><strong>App:</strong> Quiz Reels (<code>com.nrdda.quizreels</code>)</p>
