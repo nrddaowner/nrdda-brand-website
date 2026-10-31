@@ -85,7 +85,7 @@
         <h3>Key takeaways</h3>
         <ul>
           <li><strong>No sign-in needed.</strong> Every question works without one. Signing in with your email is optional and only puts you on the leaderboard and keeps your points across phones. We never ask for your phone number, photos or location.</li>
-          <li><strong>Your study progress stays on your phone, encrypted.</strong> Answers, streaks, saved cards and settings are sealed with a key held in Android&rsquo;s hardware-backed Keystore.</li>
+          <li><strong>Your study progress stays on your phone, encrypted.</strong> Answers, streaks, saved cards and settings are stored encrypted, inside the App&rsquo;s private storage.</li>
           <li><strong>Points and the leaderboard run on our own server.</strong> It receives the answers it needs to award points, an anonymous player ID, and, only if you sign in, your email and the name you show on the board. The App contains no analytics or crash-reporting SDK.</li>
           <li><strong>Cloud backup comes only with QuizReels Gold.</strong> Without Gold, your study progress never leaves your phone.</li>
           <li><strong>Reminders are worked out on your phone.</strong> Which reminder you get, and its words, come from your progress on the device. Only &ldquo;new topic&rdquo; messages come from Google&rsquo;s Firebase Cloud Messaging, and you can switch them off.</li>
@@ -115,8 +115,7 @@
           installed it and when it last offered QuizReels Gold. These never leave your phone.
         </p>
         <p>
-          <strong>Encryption:</strong> the study database is encrypted with SQLCipher and your profile with
-          AES-256-GCM, using a key that never leaves the Android Keystore. The App also opts out of
+          <strong>Encryption:</strong> this data is stored encrypted on your phone. The App also opts out of
           Android&rsquo;s automatic cloud backup, so these files are not copied off your phone.
         </p>
         <p>
@@ -164,8 +163,7 @@
       <h2>03. What our server receives</h2>
       <p>
         Points, the weekly leaderboard, optional sign-in and QuizReels Gold&rsquo;s cloud backup run on
-        a server operated by NRDDA Tech and hosted in
-        India. All traffic to it uses HTTPS. We do not sell or share this data with anyone, and we do not use it
+        a server operated by NRDDA Tech. All traffic to it uses HTTPS. We do not sell or share this data with anyone, and we do not use it
         for advertising.
       </p>
 
@@ -176,10 +174,10 @@
           install. It has no name, email or phone number attached.
         </p>
         <p>
-          <strong>Data received:</strong> a random install ID made by the App, the App and Android version, and
-          your IP address (kept with your device record to stop abuse such as fake accounts and point farming).
+          <strong>Data received:</strong> a random ID for this install, the App and Android version, and
+          your IP address (used to keep the service secure and prevent misuse).
           For points, the App sends which question you answered, the option you picked and how long you took;
-          the server checks the answer against its own copy of the questions and adds up your points, streak
+          the server works out your points, streak
           and weekly total.
         </p>
         <p>
@@ -211,7 +209,7 @@
           new phone: the cards you answered, saved or liked and how well you know each, your daily totals and
           streak days, your progress in each study set, your daily goal and your language choices. It syncs
           when you open the App and while you study. The answer history, question reports and sprint results
-          stay on your phone. Older copies are removed after 7 days.
+          stay on your phone.
         </p>
         <p>
           The character or letter you pick is stored with your account so others see it on the leaderboard.
@@ -430,8 +428,8 @@
       <h2>11. Security and retention</h2>
       <ul>
         <li><strong>In transit:</strong> all traffic to our server and to Google services uses HTTPS/TLS.</li>
-        <li><strong>Our server:</strong> your player account, points and (with Gold) cloud backup are kept while you use the App, and deleted 14 days after you delete your account. Older cloud-backup copies are removed after 7 days.</li>
-        <li><strong>On device:</strong> study data is encrypted (SQLCipher and AES-256-GCM, key in the Android Keystore) inside the App&rsquo;s private storage, protected by Android&rsquo;s app sandbox.</li>
+        <li><strong>Our server:</strong> your player account, points and (with Gold) cloud backup are kept while you use the App, and deleted 14 days after you delete your account.</li>
+        <li><strong>On device:</strong> study data is stored encrypted inside the App&rsquo;s private storage.</li>
         <li><strong>Backups:</strong> a backup file you create is kept wherever you saved or sent it, until you delete it.</li>
         <li><strong>Ads, settings and purchases:</strong> kept by Google under its own retention policies.</li>
         <li><strong>Local data:</strong> kept until you clear it or uninstall the App.</li>
