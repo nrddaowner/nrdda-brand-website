@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — Slide Out | NRDDA</title>
-<meta name="description" content="Privacy policy for Slide Out (com.nrdda.slideout) by NRDDA Tech: no account required, progress saved on your device, ads by Google AdMob, game settings from Firebase Remote Config, optional purchases through Google Play.">
+<meta name="description" content="Privacy policy for Slide Out (com.nrdda.slideout) by NRDDA Tech: no sign-in required, progress saved on your device, optional email sign-in with cloud save and leaderboards on our own server, ads by Google AdMob, game settings from Firebase Remote Config, optional purchases through Google Play.">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://nrdda.com/privacy/slide-out.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +40,7 @@
       when they show ads or process purchases, and how to switch each of those off.
     </p>
     <div class="appmeta">
-      <span class="metapill">Effective <b>23 October 2026</b></span>
+      <span class="metapill">Effective <b>1 November 2026</b></span>
       <span class="metapill">Package <b>com.nrdda.slideout</b></span>
       <span class="metapill">Publisher <b>NRDDA Tech</b></span>
       <span class="metapill">Platform <b>Android</b></span>
@@ -55,6 +55,7 @@
     <ol>
       <li><a href="#overview">Overview</a></li>
       <li><a href="#device">On your device</a></li>
+      <li><a href="#server">Our server</a></li>
       <li><a href="#google">Google services</a></li>
       <li><a href="#optional">Optional features</a></li>
       <li><a href="#consent">Ad consent</a></li>
@@ -81,9 +82,9 @@
       <div class="keypoints">
         <h3>Key takeaways</h3>
         <ul>
-          <li><strong>No account, ever.</strong> We never ask for your name, email address, phone number, photos or location.</li>
+          <li><strong>No sign-in needed.</strong> The whole game works without one. Signing in with your email is optional and only adds cloud save and the leaderboards. We never ask for your phone number, photos or location.</li>
           <li><strong>Your progress stays on your phone.</strong> Levels, stars, hearts, hints, streaks, themes and settings are stored in the App&rsquo;s private storage.</li>
-          <li><strong>We run no server for this game</strong> and the App contains no analytics or crash-reporting SDK. Anything that leaves your device goes to a Google service, never to a server of ours.</li>
+          <li><strong>Cloud save, leaderboards and purchase checks run on our own server.</strong> Without sign-in it only knows an anonymous player for this install. The App contains no analytics or crash-reporting SDK.</li>
           <li><strong>Game settings come from Firebase.</strong> The App downloads settings such as how often ads appear and how many hearts you get from Google&rsquo;s Firebase Remote Config. This uses a random installation ID, not your identity.</li>
           <li><strong>The game is ad-supported.</strong> Ads come from Google AdMob. A one-time purchase, Slide Out Plus, removes interstitial and banner ads.</li>
           <li><strong>We never sell your personal information</strong>, to anyone.</li>
@@ -106,8 +107,8 @@
           you have opened the game and how recently an ad was shown. These never leave your phone.
         </p>
         <p>
-          <strong>Removing it:</strong> clearing the App&rsquo;s data or uninstalling deletes all of it. We have no
-          copy.
+          <strong>Removing it:</strong> clearing the App&rsquo;s data or uninstalling deletes all of it from your
+          phone. What our server holds (section 03) is deleted separately, as described there.
         </p>
       </div>
 
@@ -142,8 +143,47 @@
       </div>
     </section>
 
+    <section id="server">
+      <h2>03. What our server receives</h2>
+      <p>
+        Cloud save, the leaderboards, optional sign-in and checking Slide Out Plus run on a server operated by
+        NRDDA Tech. All traffic to it uses HTTPS. We do not sell or share this data with anyone, and we do not use
+        it for advertising.
+      </p>
+
+      <div class="card">
+        <div class="card__head"><span class="tag">Automatic</span><h3>Anonymous player</h3></div>
+        <p>
+          When the App first connects, the server creates an <strong>anonymous player account</strong> for this
+          install, with no name, email or phone number attached.
+        </p>
+        <p>
+          <strong>Data received:</strong> a random ID for this install, the App and Android version, and your IP
+          address (used to keep the service secure and prevent misuse).
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card__head"><span class="tag">Optional</span><h3>Sign in with email</h3></div>
+        <p>
+          You can sign in with your email address to keep your game on a new phone and appear on the
+          leaderboards. We email you a one-time code to confirm it is yours; there is no password.
+        </p>
+        <p>
+          <strong>Cloud save:</strong> once signed in, the App keeps a copy of your progress on our server: stars
+          and skipped levels, hints, daily puzzle results, themes you unlocked, chapter rewards, which new pieces
+          and themes you have seen, and your settings. Hearts, ad counters, reminders and game statistics stay on
+          your phone.
+        </p>
+        <p>
+          <strong>Leaderboards:</strong> your total stars, best daily streak and daily puzzle result are shown with
+          the name you choose. Your email address is never shown to anyone.
+        </p>
+      </div>
+    </section>
+
     <section id="google">
-      <h2>03. What Google&rsquo;s services collect</h2>
+      <h2>04. What Google&rsquo;s services collect</h2>
       <p>
         The App uses the following Google services. Each receives data directly from your device under
         Google&rsquo;s own privacy policy, acting as a service provider to us.
@@ -166,7 +206,7 @@
         <p>
           <strong>Purpose:</strong> showing ads, measuring them, limiting how often you see the same ad, and
           preventing fraud. Whether ads are personalised depends on your consent choice (see
-          <a href="#consent">section 05</a>) and your device&rsquo;s ad settings.
+          <a href="#consent">section 06</a>) and your device&rsquo;s ad settings.
         </p>
       </div>
 
@@ -212,7 +252,7 @@
     </section>
 
     <section id="optional">
-      <h2>04. Optional features</h2>
+      <h2>05. Optional features</h2>
       <p>The following only happen if you choose them. The game is fully playable without them.</p>
 
       <div class="card">
@@ -224,7 +264,8 @@
         </p>
         <p>
           <strong>Data processed:</strong> product ID, purchase token, order ID and purchase status, used to give you
-          what you bought and to restore it after a reinstall or on a new phone.
+          what you bought and to restore it after a reinstall or on a new phone. The App also sends the purchase
+          token to our server, which confirms it directly with Google Play. A refunded purchase is taken back.
         </p>
         <p>
           <strong>Payment details:</strong> payments are handled entirely by Google Play. We never see your card
@@ -234,7 +275,7 @@
     </section>
 
     <section id="consent">
-      <h2>05. Ad consent</h2>
+      <h2>06. Ad consent</h2>
       <p>
         In places where the law requires your permission before ads can use your data, such as the
         European Economic Area, the United Kingdom and Switzerland, the App shows
@@ -253,14 +294,14 @@
     </section>
 
     <section id="permissions">
-      <h2>06. Android permissions</h2>
+      <h2>07. Android permissions</h2>
       <div class="tablewrap">
         <table>
           <thead>
             <tr><th scope="col">Permission</th><th scope="col">Why the App needs it</th></tr>
           </thead>
           <tbody>
-            <tr><td><code>INTERNET</code></td><td>Loading ads, processing purchases, downloading game settings and checking for updates.</td></tr>
+            <tr><td><code>INTERNET</code></td><td>Cloud save, leaderboards and optional sign-in on our server, loading ads, processing purchases, downloading game settings and checking for updates.</td></tr>
             <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Checking whether you are online, so the game keeps working offline.</td></tr>
             <tr><td><code>VIBRATE</code></td><td>Haptic feedback when sticks slide, stop and clear. Can be turned off in Settings.</td></tr>
             <tr><td><code>POST_NOTIFICATIONS</code></td><td>Showing local reminders and the new-version notice on Android 13 and newer. Android asks you first.</td></tr>
@@ -276,7 +317,7 @@
     </section>
 
     <section id="data-safety">
-      <h2>07. Google Play Data Safety summary</h2>
+      <h2>08. Google Play Data Safety summary</h2>
       <div class="tablewrap">
         <table>
           <thead>
@@ -291,15 +332,19 @@
             <tr><td>App interactions (ad views and taps)</td><td>AdMob</td><td>No</td><td>Advertising, analytics</td></tr>
             <tr><td>Diagnostics (ad SDK performance)</td><td>AdMob</td><td>No</td><td>Fraud prevention, ad delivery</td></tr>
             <tr><td>Device or other IDs (Firebase installation ID)</td><td>Firebase Remote Config</td><td>No</td><td>App functionality (game settings)</td></tr>
-            <tr><td>Purchase history</td><td>Google Play Billing</td><td>No</td><td>Delivering purchases (optional)</td></tr>
+            <tr><td>Purchase history</td><td>Google Play Billing, our server</td><td>No</td><td>Delivering purchases (optional)</td></tr>
+            <tr><td>Device or other IDs (install ID)</td><td>Our server</td><td>No</td><td>App functionality, fraud prevention</td></tr>
+            <tr><td>Personal info: email address</td><td>Our server, only if you sign in</td><td>No</td><td>Account management</td></tr>
+            <tr><td>Personal info: name you choose for the leaderboards</td><td>Our server, only if you sign in</td><td>No</td><td>App functionality (shown on the leaderboards)</td></tr>
+            <tr><td>App activity (game progress for cloud save and leaderboards)</td><td>Our server, only if you sign in</td><td>No</td><td>App functionality</td></tr>
           </tbody>
         </table>
       </div>
-      <p>All data is encrypted in transit. You can ask for your data to be deleted (see <a href="#rights">section 09</a>).</p>
+      <p>All data is encrypted in transit. You can ask for your data to be deleted (see <a href="#rights">section 10</a>).</p>
     </section>
 
     <section id="children">
-      <h2>08. Children</h2>
+      <h2>09. Children</h2>
       <p>
         Slide Out is a general-audience puzzle game and is <strong>not directed at children under 13</strong>.
         We do not knowingly collect personal information from children under 13 (or the minimum age of
@@ -310,16 +355,21 @@
     </section>
 
     <section id="rights">
-      <h2>09. Your rights and choices</h2>
+      <h2>10. Your rights and choices</h2>
       <ul>
         <li><strong>Ad consent:</strong> open the game and go to <strong>Settings &rsaquo; Ad choices</strong> (shown where consent applies).</li>
         <li><strong>Advertising ID:</strong> reset or delete it in Android Settings &rsaquo; Google &rsaquo; Ads.</li>
         <li><strong>Remove ads:</strong> buy Slide Out Plus from the Themes screen or Settings.</li>
+        <li>
+          <strong>Delete your account:</strong> signed in, use <strong>Delete account</strong> in Settings. Your cloud
+          save, leaderboard name and scores are deleted from our server after 14 days; sign in again within those
+          14 days to cancel. Not signed in, email us and we will delete the anonymous player for that install.
+        </li>
         <li><strong>Local game data:</strong> Android Settings &rsaquo; Apps &rsaquo; Slide Out &rsaquo; Storage &rsaquo; <strong>Clear data</strong>, or uninstall the App.</li>
         <li>
-          <strong>Access or deletion requests:</strong> email us. We hold no personal data about you ourselves, so
-          we will tell you what the App stores on your phone and work with Google on anything held by AdMob,
-          Firebase or Google Play. We reply within 30 days, free of charge. This applies under India&rsquo;s Digital Personal
+          <strong>Access or deletion requests:</strong> email us. We will send you what our server holds about you,
+          delete it on request, tell you what the App stores on your phone, and work with Google on anything held
+          by AdMob, Firebase or Google Play. We reply within 30 days, free of charge. This applies under India&rsquo;s Digital Personal
           Data Protection Act 2023, the EU/UK GDPR and California&rsquo;s CCPA/CPRA, and we extend it to everyone
           wherever they live.
         </li>
@@ -327,9 +377,10 @@
     </section>
 
     <section id="retention">
-      <h2>10. Security and retention</h2>
+      <h2>11. Security and retention</h2>
       <ul>
-        <li><strong>In transit:</strong> all traffic to Google services uses HTTPS/TLS.</li>
+        <li><strong>In transit:</strong> all traffic to our server and to Google services uses HTTPS/TLS.</li>
+        <li><strong>Our server:</strong> your player account, scores and (if signed in) cloud save are kept while you use the App, and deleted 14 days after you delete your account.</li>
         <li><strong>On device:</strong> game data is kept in the App&rsquo;s private storage, protected by Android&rsquo;s app sandbox.</li>
         <li><strong>Backups:</strong> a backup file you create is kept wherever you saved it, until you delete it.</li>
         <li><strong>Ads, purchases and game settings:</strong> kept by Google (AdMob, Google Play and Firebase) under its own retention policies.</li>
@@ -339,15 +390,16 @@
     </section>
 
     <section id="changes">
-      <h2>11. Changes to this policy</h2>
+      <h2>12. Changes to this policy</h2>
       <p>
         If the App starts collecting something new, this page will be updated first, with a new effective
-        date at the top. Significant changes will also be mentioned in the App&rsquo;s update notes.
+        date at the top. The 1 November 2026 update added optional email sign-in, cloud save and leaderboards on
+        our own server, and a server check of Slide Out Plus purchases. Significant changes will also be mentioned in the App&rsquo;s update notes.
       </p>
     </section>
 
     <section id="contact">
-      <h2>12. Contact</h2>
+      <h2>13. Contact</h2>
       <div class="card">
         <p><strong>Publisher:</strong> NRDDA Tech, Hyderabad, Telangana, India</p>
         <p><strong>App:</strong> Slide Out (<code>com.nrdda.slideout</code>)</p>
