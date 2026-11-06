@@ -39,7 +39,7 @@
       when they show ads or process a purchase, and how to switch each of those off.
     </p>
     <div class="appmeta">
-      <span class="metapill">Effective <b>28 October 2026</b></span>
+      <span class="metapill">Effective <b>6 November 2026</b></span>
       <span class="metapill">Package <b>com.nrdda.skyspark</b></span>
       <span class="metapill">Publisher <b>NRDDA Tech</b></span>
       <span class="metapill">Platform <b>Android</b></span>
@@ -53,6 +53,7 @@
     <ol>
       <li><a href="#overview">Overview</a></li>
       <li><a href="#device">On your device</a></li>
+      <li><a href="#server">Our server</a></li>
       <li><a href="#google">Google services</a></li>
       <li><a href="#optional">Optional purchase</a></li>
       <li><a href="#consent">Ad consent</a></li>
@@ -77,12 +78,12 @@
       <div class="keypoints">
         <h3>Key takeaways</h3>
         <ul>
-          <li><strong>No account, ever.</strong> We never ask for your name, email address, phone number, photos or location.</li>
-          <li><strong>Your progress stays on your phone.</strong> Levels, boosters and settings are stored in the App&rsquo;s private storage.</li>
-          <li><strong>We run no server for this game</strong> and the App contains no analytics, crash-reporting or Firebase SDK. Anything that leaves your device goes to a Google service, never to a server of ours.</li>
+          <li><strong>No sign-up needed.</strong> The game works without an account. Saving with your email is optional, and we never ask for your name, phone number, photos or location.</li>
+          <li><strong>Your progress lives on your phone.</strong> If you own Sky Spark Plus and save with email, a copy is also kept on our server so it can come back on a new phone.</li>
+          <li><strong>A small server of ours</strong> (GameHub, run by NRDDA Tech) checks purchases and keeps the optional account and cloud save. The App contains no analytics, crash-reporting or Firebase SDK.</li>
           <li><strong>Reminders are worked out on your phone.</strong> When they arrive and what they say come from your progress on the device. There is no push server, and you can switch them off.</li>
           <li><strong>Backups are a file you keep.</strong> Save backup writes a small file wherever you choose; we never receive it.</li>
-          <li><strong>The game is ad-supported.</strong> Ads come from Google AdMob. A one-time purchase, No Ads, removes the banner and the ads between levels.</li>
+          <li><strong>The game is ad-supported.</strong> Ads come from Google AdMob. A one-time purchase, Sky Spark Plus, removes the banner and the ads between levels and adds cloud save.</li>
           <li><strong>We never sell your personal information</strong>, to anyone.</li>
         </ul>
       </div>
@@ -99,12 +100,12 @@
         </p>
         <p>
           <strong>Also on device:</strong> simple counters the App uses to pace its ads, such as how many
-          levels have passed since the last ad and how many ads were shown today, and whether you own No Ads.
+          levels have passed since the last ad and how many ads were shown today, and whether you own Sky Spark Plus.
           These never leave your phone.
         </p>
         <p>
-          <strong>Removing it:</strong> Settings &rsaquo; Start over in the game resets your progress; clearing
-          the App&rsquo;s data or uninstalling deletes all of it. We have no copy.
+          <strong>Removing it:</strong> Settings &rsaquo; Start over in the game resets your progress (and your cloud
+          save, if you have one); clearing the App&rsquo;s data or uninstalling deletes what is on your phone.
         </p>
       </div>
 
@@ -122,7 +123,7 @@
           is sent anywhere.
         </p>
         <p>
-          Turn them off with <strong>Settings &rsaquo; Remind</strong> in the game, or in Android&rsquo;s
+          Turn them off with <strong>Settings &rsaquo; Reminders</strong> in the game, or in Android&rsquo;s
           notification settings.
         </p>
       </div>
@@ -130,14 +131,14 @@
       <div class="card">
         <div class="card__head"><span class="tag">Your file</span><h3>Backup file</h3></div>
         <p>
-          <strong>Settings &rsaquo; Save backup</strong> writes a small file with your next level, booster counts,
+          <strong>Settings &rsaquo; Backup file &rsaquo; Save</strong> writes a small file with your next level, booster counts,
           misses per level and how many pieces you have met. Android&rsquo;s own file picker lets you choose
           where it goes, such as your phone&rsquo;s storage or a cloud drive you already use; if you pick a cloud
           drive, that provider&rsquo;s terms apply to the file.
         </p>
         <p>
-          <strong>Restore backup</strong> reads a file you pick and asks before replacing your progress. The App
-          opens only files you choose, and we never receive a copy. No Ads is not in the file; Restore
+          <strong>Restore</strong> reads a file you pick and asks before replacing your progress. The App
+          opens only files you choose, and we never receive a copy. Sky Spark Plus is not in the file; Restore
           purchases brings it back through Google Play.
         </p>
       </div>
@@ -151,8 +152,41 @@
       </div>
     </section>
 
+    <section id="server">
+      <h2>03. What our server receives</h2>
+      <p>
+        Checking purchases, the optional account and cloud save run on a server operated by NRDDA Tech (GameHub).
+        All traffic to it uses HTTPS. We do not sell or share this data with anyone, and we do not use it for
+        advertising.
+      </p>
+      <div class="card">
+        <div class="card__head"><span class="tag">Automatic</span><h3>Anonymous player</h3></div>
+        <p>
+          When the App first connects, the server creates an <strong>anonymous player account</strong> for this
+          install, with no name, email or phone number attached.
+        </p>
+        <p>
+          <strong>Data received:</strong> a random ID for this install, the App and Android version, your IP
+          address (used to keep the service secure and prevent misuse), and the Google Play purchase token for
+          Sky Spark Plus, so the server can confirm the purchase with Google and keep it with your account.
+        </p>
+      </div>
+      <div class="card">
+        <div class="card__head"><span class="tag">Optional</span><h3>Save with email</h3></div>
+        <p>
+          You can save your game to your email address so it can come back on a new phone. We email you a
+          one-time code to confirm it is yours; there is no password.
+        </p>
+        <p>
+          <strong>Cloud save</strong> (for the person who bought Sky Spark Plus): the App keeps a copy of your next
+          level, coins, booster counts, misses per level, how many pieces you have met, and your music, sound,
+          vibration and calm-mode settings. Ad counters, reminders and widgets stay on your phone.
+        </p>
+      </div>
+    </section>
+
     <section id="google">
-      <h2>03. What Google&rsquo;s services collect</h2>
+      <h2>04. What Google&rsquo;s services collect</h2>
       <p>
         The App uses the following Google services. Each receives data directly from your device under
         Google&rsquo;s own privacy policy, acting as a service provider to us.
@@ -174,7 +208,7 @@
         <p>
           <strong>Purpose:</strong> showing ads, measuring them, limiting how often you see the same ad, and
           preventing fraud. Whether ads are personalised depends on your consent choice (see
-          <a href="#consent">section 05</a>) and your device&rsquo;s ad settings.
+          <a href="#consent">section 06</a>) and your device&rsquo;s ad settings.
         </p>
       </div>
 
@@ -193,17 +227,18 @@
     </section>
 
     <section id="optional">
-      <h2>04. Optional purchase</h2>
+      <h2>05. Optional purchase</h2>
       <p>The game is fully playable without buying anything.</p>
       <div class="card">
         <div class="card__head"><span class="tag">Optional</span><h3>Purchases through Google Play</h3></div>
         <p>
-          The App sells one thing: <strong>No Ads</strong>, a one-time purchase that removes the banner and
-          the interstitial ads. Rewarded videos stay available if you want boosters from them.
+          The App sells one thing: <strong>Sky Spark Plus</strong>, a one-time purchase that removes the banner and
+          the interstitial ads and adds cloud save. Rewarded videos stay available if you want boosters from them.
         </p>
         <p>
           <strong>Data processed:</strong> product ID, purchase token, order ID and purchase status, used to give you
           what you bought and to restore it after a reinstall or on a new phone (Settings &rsaquo; Restore purchases).
+          The purchase token also goes to our server, which confirms it with Google and keeps it with your account.
         </p>
         <p>
           <strong>Payment details:</strong> payments are handled entirely by Google Play. We never see your card
@@ -213,7 +248,7 @@
     </section>
 
     <section id="consent">
-      <h2>05. Ad consent</h2>
+      <h2>06. Ad consent</h2>
       <p>
         In places where the law requires your permission before ads can use your data, such as the
         European Economic Area, the United Kingdom and Switzerland, the App shows
@@ -232,19 +267,19 @@
     </section>
 
     <section id="permissions">
-      <h2>06. Android permissions</h2>
+      <h2>07. Android permissions</h2>
       <div class="tablewrap">
         <table>
           <thead>
             <tr><th scope="col">Permission</th><th scope="col">Why the App needs it</th></tr>
           </thead>
           <tbody>
-            <tr><td><code>INTERNET</code></td><td>Loading ads, processing purchases, and checking Google Play for a newer version.</td></tr>
+            <tr><td><code>INTERNET</code></td><td>Loading ads, processing purchases, the optional account and cloud save on our server, and checking Google Play for a newer version.</td></tr>
             <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Checking whether you are online, so the game keeps working offline.</td></tr>
             <tr><td><code>VIBRATE</code></td><td>Haptic feedback when fireworks burst. Can be turned off in Settings.</td></tr>
             <tr><td><code>POST_NOTIFICATIONS</code></td><td>Showing reminders and the new-version notice on Android 13 and newer. Android asks you first.</td></tr>
             <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Re-scheduling your local reminders after the phone restarts.</td></tr>
-            <tr><td><code>BILLING</code></td><td>Buying and restoring No Ads through Google Play.</td></tr>
+            <tr><td><code>BILLING</code></td><td>Buying and restoring Sky Spark Plus through Google Play.</td></tr>
             <tr><td><code>AD_ID</code></td><td>Letting AdMob read the Advertising ID, according to your consent and device settings. Added by the Google Mobile Ads SDK.</td></tr>
           </tbody>
         </table>
@@ -256,7 +291,7 @@
     </section>
 
     <section id="data-safety">
-      <h2>07. Google Play Data Safety summary</h2>
+      <h2>08. Google Play Data Safety summary</h2>
       <div class="tablewrap">
         <table>
           <thead>
@@ -270,15 +305,18 @@
             <tr><td>Approximate location (from IP address)</td><td>AdMob</td><td>Yes, through AdMob</td><td>Advertising, fraud prevention</td></tr>
             <tr><td>App interactions (ad views and taps)</td><td>AdMob</td><td>No</td><td>Advertising, analytics</td></tr>
             <tr><td>Diagnostics (ad SDK performance)</td><td>AdMob</td><td>No</td><td>Fraud prevention, ad delivery</td></tr>
-            <tr><td>Purchase history</td><td>Google Play Billing</td><td>No</td><td>Delivering purchases (optional)</td></tr>
+            <tr><td>Purchase history</td><td>Google Play Billing, our server</td><td>No</td><td>Delivering purchases (optional)</td></tr>
+            <tr><td>Device or other IDs (install ID)</td><td>Our server</td><td>No</td><td>App functionality, fraud prevention</td></tr>
+            <tr><td>Personal info: email address</td><td>Our server, only if you save with email</td><td>No</td><td>Account management</td></tr>
+            <tr><td>App activity (game progress for cloud save)</td><td>Our server, only with Sky Spark Plus and email</td><td>No</td><td>App functionality</td></tr>
           </tbody>
         </table>
       </div>
-      <p>All data is encrypted in transit. You can ask for your data to be deleted (see <a href="#rights">section 09</a>).</p>
+      <p>All data is encrypted in transit. You can ask for your data to be deleted (see <a href="#rights">section 10</a>).</p>
     </section>
 
     <section id="children">
-      <h2>08. Children</h2>
+      <h2>09. Children</h2>
       <p>
         Sky Spark is a general-audience puzzle game and is <strong>not directed at children under 13</strong>.
         We do not knowingly collect personal information from children under 13 (or the minimum age of
@@ -289,18 +327,23 @@
     </section>
 
     <section id="rights">
-      <h2>09. Your rights and choices</h2>
+      <h2>10. Your rights and choices</h2>
       <ul>
         <li><strong>Ad consent:</strong> open the game and go to <strong>Settings &rsaquo; Privacy options</strong> (shown where consent applies).</li>
         <li><strong>Advertising ID:</strong> reset or delete it in Android Settings &rsaquo; Google &rsaquo; Ads.</li>
-        <li><strong>Remove ads:</strong> buy No Ads from the Shop.</li>
-        <li><strong>Reminders:</strong> turn them off with Settings &rsaquo; Remind in the game, or in Android&rsquo;s notification settings.</li>
+        <li><strong>Remove ads:</strong> buy Sky Spark Plus from the Shop or Settings.</li>
+        <li>
+          <strong>Delete your account:</strong> signed in, open <strong>Settings &rsaquo; Account &rsaquo; Delete account</strong>.
+          Your email and cloud save are deleted from our server after 14 days; sign in again within those 14 days to
+          cancel. Not signed in, email us and we will delete the anonymous player for that install.
+        </li>
+        <li><strong>Reminders:</strong> turn them off with Settings &rsaquo; Reminders in the game, or in Android&rsquo;s notification settings.</li>
         <li><strong>Backup files:</strong> they are yours; delete them wherever you saved them.</li>
         <li><strong>Local game data:</strong> Settings &rsaquo; Start over in the game, or Android Settings &rsaquo; Apps &rsaquo; Sky Spark &rsaquo; Storage &rsaquo; <strong>Clear data</strong>, or uninstall the App.</li>
         <li>
-          <strong>Access or deletion requests:</strong> email us. We hold no personal data about you ourselves, so
-          we will tell you what the App stores on your phone and work with Google on anything held by AdMob
-          or Google Play. We reply within 30 days, free of charge. This applies under India&rsquo;s Digital Personal
+          <strong>Access or deletion requests:</strong> email us. We will send you what our server holds about you,
+          delete it on request, tell you what the App stores on your phone, and work with Google on anything held
+          by AdMob or Google Play. We reply within 30 days, free of charge. This applies under India&rsquo;s Digital Personal
           Data Protection Act 2023, the EU/UK GDPR and California&rsquo;s CCPA/CPRA, and we extend it to everyone
           wherever they live.
         </li>
@@ -308,9 +351,10 @@
     </section>
 
     <section id="retention">
-      <h2>10. Security and retention</h2>
+      <h2>11. Security and retention</h2>
       <ul>
-        <li><strong>In transit:</strong> all traffic to Google services uses HTTPS/TLS.</li>
+        <li><strong>In transit:</strong> all traffic to our server and to Google services uses HTTPS/TLS.</li>
+        <li><strong>Our server:</strong> your player account, purchases and (with Plus and email) cloud save are kept while you use the App, and deleted 14 days after you delete your account.</li>
         <li><strong>On device:</strong> game data is kept in the App&rsquo;s private storage, protected by Android&rsquo;s app sandbox.</li>
         <li><strong>Ads and purchases:</strong> kept by Google (AdMob and Google Play) under its own retention policies.</li>
         <li><strong>Local data:</strong> kept until you clear it or uninstall the App.</li>
@@ -320,7 +364,7 @@
     </section>
 
     <section id="changes">
-      <h2>11. Changes to this policy</h2>
+      <h2>12. Changes to this policy</h2>
       <p>
         If the App starts collecting something new, this page will be updated first, with a new effective
         date at the top. Significant changes will also be mentioned in the App&rsquo;s update notes.
@@ -328,7 +372,7 @@
     </section>
 
     <section id="contact">
-      <h2>12. Contact</h2>
+      <h2>13. Contact</h2>
       <div class="card">
         <p><strong>Publisher:</strong> NRDDA Tech, Hyderabad, Telangana, India</p>
         <p><strong>App:</strong> Sky Spark: Fireworks Puzzle (<code>com.nrdda.skyspark</code>)</p>
