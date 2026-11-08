@@ -89,7 +89,7 @@
           <li><strong>Points, the leaderboard, comments and question reports run on our own server.</strong> It receives your email, the name you show on the board, the answers it needs to award points, comments you write and mistakes you report. The App contains no analytics or crash-reporting SDK.</li>
           <li><strong>Comments are public.</strong> A comment you write on a reel can be read by everyone who opens that reel, with your leaderboard name. Your email is never shown. See the <a href="../rules/comments.html">comment rules</a>.</li>
           <li><strong>Cloud backup comes only with QuizReels Gold.</strong> Without Gold, your study progress never leaves your phone.</li>
-          <li><strong>Reminders are worked out on your phone.</strong> Which reminder you get, and its words, come from your progress on the device. Only &ldquo;new topic&rdquo; messages come from Google&rsquo;s Firebase Cloud Messaging, and you can switch them off.</li>
+          <li><strong>Reminders are worked out on your phone.</strong> Which reminder you get, and its words, come from your progress on the device. Only &ldquo;new topic&rdquo; messages and news of replies to and likes on your comments come through Google&rsquo;s Firebase Cloud Messaging, and you can switch each off.</li>
           <li><strong>The app is ad-supported.</strong> Ads come from Google AdMob. A one-time purchase, <strong>QuizReels Gold</strong>, removes the ads and adds extras (automatic backup, characters, a crown on the leaderboard). No question or study feature is ever locked behind it.</li>
           <li><strong>We never sell your personal information</strong>, to anyone.</li>
         </ul>
@@ -300,16 +300,24 @@
         <p>
           We use Firebase Cloud Messaging to send occasional messages to everyone who uses the App, such as
           &ldquo;a new topic has been added&rdquo;. Messages go to a topic for your App language (Hindi or
-          English), not to you personally, and we do not keep a list of devices.
+          English), not to you personally.
+        </p>
+        <p>
+          <strong>Replies and likes:</strong> while you are signed in and <strong>Replies and likes</strong> is on,
+          the App sends this phone&rsquo;s messaging token to our server, kept with your account, so we can tell
+          you when someone answers or likes your comment. The message we send through Google says only that
+          there is news; your phone then asks our server what it is. No comment, name or reel goes through
+          Google. The token is removed when you sign out, switch it off, or delete your account.
         </p>
         <p>
           <strong>Data processed:</strong> a Firebase installation ID and a messaging token (random
-          identifiers for this install of the App, not linked to you), the App version and basic device
+          identifiers for this install of the App; the token is linked to your account only for replies and
+          likes, above), the App version and basic device
           information, which Google needs to deliver the message.
         </p>
         <p>
-          <strong>Turning it off:</strong> switch off <strong>New topics</strong> in Settings &rsaquo; Notifications,
-          and the App leaves the topic. Android&rsquo;s notification settings also stop them.
+          <strong>Turning it off:</strong> switch off <strong>New topics</strong> or <strong>Replies and likes</strong>
+          in Settings &rsaquo; Notifications. Android&rsquo;s notification settings also stop them.
         </p>
       </div>
     </section>
@@ -467,7 +475,7 @@
         If the App starts collecting something new, this page will be updated first, with a new effective
         date at the top. The 1 November 2026 update added points and the leaderboard on our own server,
         optional email sign-in, and QuizReels Gold (formerly Ad-free) with cloud backup. The 8 November 2026
-        update made email sign-in required and added comments on reels and question reports sent to our server. Significant changes will also be
+        update made email sign-in required and added comments on reels, notifications of replies to and likes on your comments, and question reports sent to our server. Significant changes will also be
         mentioned in the App&rsquo;s update notes.
       </p>
     </section>
