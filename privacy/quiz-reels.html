@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — Quiz Reels | NRDDA</title>
-<meta name="description" content="Privacy policy for Quiz Reels (com.nrdda.quizreels) by NRDDA Tech: no sign-in required, study progress encrypted on your device, points and leaderboard on our own server, optional email sign-in, ads by Google AdMob, optional QuizReels Gold purchase through Google Play.">
+<meta name="description" content="Privacy policy for Quiz Reels (com.nrdda.quizreels) by NRDDA Tech: email sign-in with a one-time code, study progress encrypted on your device, points, leaderboard, comments and question reports on our own server, ads by Google AdMob, optional QuizReels Gold purchase through Google Play.">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://nrdda.com/privacy/quiz-reels.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,13 +35,13 @@
     <span class="eyebrow">Privacy policy</span>
     <h1>Quiz Reels</h1>
     <p class="masthead__lede">
-      Swipe-style GK and English practice for SSC exams that you can use from the first reel without
-      telling us who you are. This policy explains what the app keeps on your phone, what it sends to our
-      own server for points and the leaderboard, what Google&rsquo;s services collect when they show ads,
+      Swipe-style GK and English practice for SSC exams. You sign in once with your email, with a one-time
+      code and no password. This policy explains what the app keeps on your phone, what it sends to our
+      own server for your account, points, comments and question reports, what Google&rsquo;s services collect when they show ads,
       deliver settings or process a purchase, and how to switch each of those off or delete it.
     </p>
     <div class="appmeta">
-      <span class="metapill">Effective <b>1 November 2026</b></span>
+      <span class="metapill">Effective <b>8 November 2026</b></span>
       <span class="metapill">Package <b>com.nrdda.quizreels</b></span>
       <span class="metapill">Publisher <b>NRDDA Tech</b></span>
       <span class="metapill">Platform <b>Android</b></span>
@@ -84,9 +84,10 @@
       <div class="keypoints">
         <h3>Key takeaways</h3>
         <ul>
-          <li><strong>No sign-in needed.</strong> Every question works without one. Signing in with your email is optional and only puts you on the leaderboard and keeps your points across phones. We never ask for your phone number, photos or location.</li>
+          <li><strong>Sign in with your email.</strong> From version 0.2.7 the App asks you to sign in once with your email; we send a one-time code, there is no password. Your points and leaderboard place then stay with you on any phone. We never ask for your phone number, photos or location.</li>
           <li><strong>Your study progress stays on your phone, encrypted.</strong> Answers, streaks, saved cards and settings are stored encrypted, inside the App&rsquo;s private storage.</li>
-          <li><strong>Points and the leaderboard run on our own server.</strong> It receives the answers it needs to award points, an anonymous player ID, and, only if you sign in, your email and the name you show on the board. The App contains no analytics or crash-reporting SDK.</li>
+          <li><strong>Points, the leaderboard, comments and question reports run on our own server.</strong> It receives your email, the name you show on the board, the answers it needs to award points, comments you write and mistakes you report. The App contains no analytics or crash-reporting SDK.</li>
+          <li><strong>Comments are public.</strong> A comment you write on a reel can be read by everyone who opens that reel, with your leaderboard name. Your email is never shown. See the <a href="../rules/comments.html">comment rules</a>.</li>
           <li><strong>Cloud backup comes only with QuizReels Gold.</strong> Without Gold, your study progress never leaves your phone.</li>
           <li><strong>Reminders are worked out on your phone.</strong> Which reminder you get, and its words, come from your progress on the device. Only &ldquo;new topic&rdquo; messages come from Google&rsquo;s Firebase Cloud Messaging, and you can switch them off.</li>
           <li><strong>The app is ad-supported.</strong> Ads come from Google AdMob. A one-time purchase, <strong>QuizReels Gold</strong>, removes the ads and adds extras (automatic backup, characters, a crown on the leaderboard). No question or study feature is ever locked behind it.</li>
@@ -162,16 +163,16 @@
     <section id="server">
       <h2>03. What our server receives</h2>
       <p>
-        Points, the weekly leaderboard, optional sign-in and QuizReels Gold&rsquo;s cloud backup run on
+        Your account, points, the weekly leaderboard, comments, question reports and QuizReels Gold&rsquo;s cloud backup run on
         a server operated by NRDDA Tech. All traffic to it uses HTTPS. We do not sell or share this data with anyone, and we do not use it
         for advertising.
       </p>
 
       <div class="card">
-        <div class="card__head"><span class="tag">Automatic</span><h3>Anonymous player and points</h3></div>
+        <div class="card__head"><span class="tag">Automatic</span><h3>This install and your points</h3></div>
         <p>
-          When the App first connects, the server creates an <strong>anonymous player account</strong> for this
-          install. It has no name, email or phone number attached.
+          When the App first connects, the server opens a session for this install, before you sign in. It has
+          no name, email or phone number attached; signing in joins it to your account.
         </p>
         <p>
           <strong>Data received:</strong> a random ID for this install, the App and Android version, and
@@ -181,16 +182,17 @@
           and weekly total.
         </p>
         <p>
-          <strong>Not received:</strong> your saved cards, reports, revision schedule, reminders or anything you
-          type, unless you use cloud backup below.
+          <strong>Not received:</strong> your saved cards, revision schedule, reminders or anything you
+          type, unless you write a comment or report a mistake (below) or use cloud backup.
         </p>
       </div>
 
       <div class="card">
-        <div class="card__head"><span class="tag">Optional</span><h3>Sign in with email</h3></div>
+        <div class="card__head"><span class="tag">Required</span><h3>Sign in with email</h3></div>
         <p>
-          You can sign in with your email address to appear on the leaderboard and keep your points on a new
-          phone. We email you a one-time code to confirm it is yours; there is no password.
+          The App asks you to sign in with your email address before the first reel. It puts you on the
+          leaderboard and keeps your points on a new phone. We email you a one-time code to confirm it is
+          yours; there is no password.
         </p>
         <p>
           <strong>Data received:</strong> your email address and the name you choose for the leaderboard.
@@ -213,6 +215,27 @@
         </p>
         <p>
           The character or letter you pick is stored with your account so others see it on the leaderboard.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card__head"><span class="tag">When you write one</span><h3>Comments</h3></div>
+        <p>
+          If you write a comment, we keep its words, the time, the reel it is on and your account&rsquo;s name,
+          and show them to everyone who opens that reel. We also keep likes and reactions you give, and reports
+          and blocks you make (these are never shown to others). You can delete your own comments at any time.
+          When you close your account, your comments&rsquo; words are deleted; replies others wrote stay, under
+          &ldquo;Deleted comment&rdquo;. Comments follow the <a href="../rules/comments.html">comment rules</a>;
+          ones that break them are removed. We do not sell or share comments with anyone.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card__head"><span class="tag">When you send one</span><h3>Reports of a mistake</h3></div>
+        <p>
+          &ldquo;Report a mistake&rdquo; sends us the question&rsquo;s ID, the reason you picked, the note you typed (if
+          any) and the App&rsquo;s version, so we can fix the question. A note with a link or a phone number is
+          dropped. Reports are kept until the question is looked at, and deleted with your account.
         </p>
       </div>
 
@@ -343,7 +366,7 @@
             <tr><th scope="col">Permission</th><th scope="col">Why the App needs it</th></tr>
           </thead>
           <tbody>
-            <tr><td><code>INTERNET</code></td><td>Points and the leaderboard on our server, new question packs, optional sign-in and cloud backup, loading ads, app settings from Remote Config, new-topic messages, and processing purchases. The questions already on your phone work offline.</td></tr>
+            <tr><td><code>INTERNET</code></td><td>Points and the leaderboard on our server, new question packs, sign-in, comments, question reports and cloud backup, loading ads, app settings from Remote Config, new-topic messages, and processing purchases. The questions already on your phone work offline.</td></tr>
             <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Checking whether you are online before asking for an ad. Added by the Google Mobile Ads SDK.</td></tr>
             <tr><td><code>POST_NOTIFICATIONS</code></td><td>Showing reminders and new-topic messages on Android 13 and newer. Android asks you first, only when you turn reminders on.</td></tr>
             <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Re-scheduling your local reminders after the phone restarts.</td></tr>
@@ -380,8 +403,9 @@
             <tr><td>Purchase history</td><td>Google Play Billing, our server</td><td>No</td><td>Delivering purchases (optional)</td></tr>
             <tr><td>Device or other IDs (install ID)</td><td>Our server</td><td>No</td><td>App functionality, fraud prevention</td></tr>
             <tr><td>App activity (answers for points, progress for Gold backup)</td><td>Our server</td><td>No</td><td>App functionality</td></tr>
-            <tr><td>Personal info: email address</td><td>Our server, only if you sign in</td><td>No</td><td>Account management</td></tr>
-            <tr><td>Personal info: name you choose for the leaderboard</td><td>Our server, only if you sign in</td><td>No</td><td>App functionality (shown on the leaderboard)</td></tr>
+            <tr><td>App activity: other user-generated content (comments, likes, reactions, question reports)</td><td>Our server, when you write or send them</td><td>No (comments are shown to other users of the App)</td><td>App functionality</td></tr>
+            <tr><td>Personal info: email address</td><td>Our server (required to sign in)</td><td>No</td><td>Account management</td></tr>
+            <tr><td>Personal info: name you choose for the leaderboard</td><td>Our server</td><td>No</td><td>App functionality (shown on the leaderboard and with your comments)</td></tr>
           </tbody>
         </table>
       </div>
@@ -409,8 +433,8 @@
         <li>
           <strong>Delete your account:</strong> signed in, go to Settings &rsaquo; <strong>Delete account</strong>.
           Your points, streak, leaderboard name, character and cloud backup are deleted from our server after
-          14 days; sign in again within those 14 days to cancel. Not signed in, email us and we will delete the anonymous player for
-          that install.
+          14 days; sign in again within those 14 days to cancel. Your comments&rsquo; words and your question
+          reports are deleted too.
         </li>
         <li><strong>Reminders and new-topic messages:</strong> turn each off in the App (Settings &rsaquo; Notifications) or all of them in Android&rsquo;s notification settings.</li>
         <li><strong>Local study data:</strong> Android Settings &rsaquo; Apps &rsaquo; Quiz Reels &rsaquo; Storage &rsaquo; <strong>Clear data</strong>, or uninstall the App.</li>
@@ -428,7 +452,7 @@
       <h2>11. Security and retention</h2>
       <ul>
         <li><strong>In transit:</strong> all traffic to our server and to Google services uses HTTPS/TLS.</li>
-        <li><strong>Our server:</strong> your player account, points and (with Gold) cloud backup are kept while you use the App, and deleted 14 days after you delete your account.</li>
+        <li><strong>Our server:</strong> your account, points, comments and (with Gold) cloud backup are kept while you use the App, and deleted 14 days after you delete your account. A question report is kept until the question is looked at.</li>
         <li><strong>On device:</strong> study data is stored encrypted inside the App&rsquo;s private storage.</li>
         <li><strong>Backups:</strong> a backup file you create is kept wherever you saved or sent it, until you delete it.</li>
         <li><strong>Ads, settings and purchases:</strong> kept by Google under its own retention policies.</li>
@@ -442,7 +466,8 @@
       <p>
         If the App starts collecting something new, this page will be updated first, with a new effective
         date at the top. The 1 November 2026 update added points and the leaderboard on our own server,
-        optional email sign-in, and QuizReels Gold (formerly Ad-free) with cloud backup. Significant changes will also be
+        optional email sign-in, and QuizReels Gold (formerly Ad-free) with cloud backup. The 8 November 2026
+        update made email sign-in required and added comments on reels and question reports sent to our server. Significant changes will also be
         mentioned in the App&rsquo;s update notes.
       </p>
     </section>
