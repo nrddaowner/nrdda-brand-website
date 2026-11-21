@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — Ira's Riddles | NRDDA</title>
-  <meta name="description" content="Privacy policy for Ira's Riddles (com.nrdda.irasriddles) by NRDDA Tech: no sign-up needed, progress saved on your device, optional email save with leaderboards and cloud backup, ads by Google AdMob, one optional Google Play purchase, an optional daily reminder set on your phone, no analytics.">
+  <meta name="description" content="Privacy policy for Ira's Riddles (com.nrdda.irasriddles) by NRDDA Tech: no sign-up needed, progress saved on your device, optional email save with leaderboards and cloud backup, ads by Google AdMob, one optional Google Play purchase, optional notifications set on your phone, no analytics.">
   <meta name="theme-color" content="#ffffff">
   <link rel="canonical" href="https://nrdda.com/privacy/iras-riddles.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -83,7 +83,7 @@
           <li><strong>No sign-up needed.</strong> The game works without an account. Saving your game with your email is optional, and we never ask for your phone number, photos, contacts or location.</li>
           <li><strong>Your progress lives on your phone.</strong> If you save your game with your email, a copy is also kept on our server so it can come back on a new phone, and your scores can appear on the leaderboards.</li>
           <li><strong>A small server of ours</strong> (GameHub, run by NRDDA Tech) checks purchases and keeps the optional account, cloud save, leaderboards and badges. The App contains no analytics, crash-reporting or Firebase SDK.</li>
-          <li><strong>The daily reminder is set on your phone.</strong> It is off until you turn it on. There is no push server.</li>
+          <li><strong>Notifications are set on your phone.</strong> They are off until you say yes, at most one a day. There is no push server.</li>
           <li><strong>The game is ad-supported.</strong> Ads come from Google AdMob. A one-time purchase, Ira&rsquo;s Riddles Plus, removes every ad and adds hints.</li>
           <li><strong>We never sell your personal information</strong>, to anyone.</li>
         </ul>
@@ -98,7 +98,7 @@
           <strong>Stored:</strong> the stars you have won on each level, the levels you skipped, how many hints
           and other helpers you hold, the days you solved the Daily Riddle (your streak), the Sunday gifts and
           packs you have finished, which first-time guides you have seen, the badges you have won, whether you
-          own Ira&rsquo;s Riddles Plus, and your sound, music, vibration and reminder settings.
+          own Ira&rsquo;s Riddles Plus, your sound, music, vibration and notification settings, and the hour you usually solve the Daily Riddle (so a notification can come then).
         </p>
         <p>
           <strong>Also on device:</strong> how many reward videos you have watched today (at most five a day)
@@ -126,19 +126,23 @@
       </div>
 
       <div class="card">
-        <div class="card__head"><span class="tag">On device only</span><h3>Daily Riddle reminder</h3></div>
+        <div class="card__head"><span class="tag">On device only</span><h3>Notifications</h3></div>
         <p>
-          The game can remind you, once a day at about 6 PM, that a new Daily Riddle is ready. It is
-          <strong>off until you turn it on</strong> in Settings, and on Android 13 and newer Android asks for your
-          permission first.
+          The game can send you a short note from Ira: that today&rsquo;s Daily Riddle is ready, that your streak is
+          waiting for today&rsquo;s riddle, that the Sunday chest is ready to open, or, after 2, 7 or 14 days away,
+          that a new riddle is waiting. <strong>At most one a day, never between 10 PM and 8 AM.</strong> Notifications
+          are <strong>off until you say yes</strong> (the game asks once, or you turn them on in Settings), and on
+          Android 13 and newer Android asks for your permission first.
         </p>
         <p>
-          The reminder is scheduled <strong>locally on your phone</strong> and its words are always the same.
-          There is no push-notification server and no notification token is sent anywhere.
+          They are worked out and scheduled <strong>locally on your phone</strong>, from what the game already keeps
+          there: when you last played, your streak, whether today&rsquo;s riddle is solved, and the hour you usually
+          solve it (so the note comes at your usual time). There is no push-notification server, and nothing about
+          your notifications or your playing time is sent anywhere.
         </p>
         <p>
-          Turn it off with <strong>Settings &rsaquo; Daily Riddle reminder</strong> in the game, or in Android&rsquo;s
-          notification settings.
+          Turn them off, all at once or one kind at a time, with <strong>Settings &rsaquo; Notifications</strong> in the
+          game, or in Android&rsquo;s notification settings.
         </p>
       </div>
     </section>
@@ -174,7 +178,7 @@
           <strong>Cloud save</strong> (free for anyone who saves with email): the App keeps a copy of your stars per
           level, skipped levels, hint and helper counts, Daily Riddle days, Sunday gifts and finished packs, the
           guides you have seen, your Plus hint days, and your sound, music and vibration settings. The reward-video
-          counter, the reminder and the ad counters stay on your phone.
+          counter, the notification settings and the ad counters stay on your phone.
         </p>
         <p>
           <strong>Leaderboards and badges</strong> (only once you save with email): your board name and your scores
@@ -280,7 +284,8 @@
             <tr><td><code>INTERNET</code></td><td>Loading ads, processing purchases, the optional account, cloud save and leaderboards on our server, and checking Google Play for a newer version. Levels themselves need no internet.</td></tr>
             <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Checking whether you are online, so the game keeps working offline.</td></tr>
             <tr><td><code>VIBRATE</code></td><td>A short buzz on a right or wrong answer. Can be turned off in Settings.</td></tr>
-            <tr><td><code>POST_NOTIFICATIONS</code></td><td>Showing the Daily Riddle reminder on Android 13 and newer. Asked for only when you turn the reminder on.</td></tr>
+            <tr><td><code>POST_NOTIFICATIONS</code></td><td>Showing the game&rsquo;s notifications on Android 13 and newer. Asked for only when you say yes to them.</td></tr>
+            <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Setting the next notification again after your phone restarts. Nothing runs when notifications are off.</td></tr>
             <tr><td><code>BILLING</code></td><td>Buying and restoring Ira&rsquo;s Riddles Plus through Google Play.</td></tr>
             <tr><td><code>AD_ID</code></td><td>Letting AdMob read the Advertising ID, according to your consent and device settings. Added by the Google Mobile Ads SDK.</td></tr>
             <tr><td><code>ACCESS_ADSERVICES_AD_ID</code>, <code>ACCESS_ADSERVICES_ATTRIBUTION</code>, <code>ACCESS_ADSERVICES_TOPICS</code></td><td>Android&rsquo;s Privacy Sandbox ad features, used by AdMob where your phone supports them and your settings allow. Added by the Google Mobile Ads SDK; you control them in Android&rsquo;s ad privacy settings.</td></tr>
@@ -344,7 +349,7 @@
           NRDDA game that uses the same account; sign in again within those 14 days to cancel. The progress on your
           phone stays. Not signed in, email us and we will delete the anonymous player for that install.
         </li>
-        <li><strong>Reminder:</strong> turn it off with Settings &rsaquo; Daily Riddle reminder in the game, or in Android&rsquo;s notification settings.</li>
+        <li><strong>Notifications:</strong> turn them off with Settings &rsaquo; Notifications in the game, or in Android&rsquo;s notification settings.</li>
         <li><strong>Android backup:</strong> switch it off, or delete the backup, in Android Settings &rsaquo; Google &rsaquo; Backup.</li>
         <li><strong>Local game data:</strong> Android Settings &rsaquo; Apps &rsaquo; Ira&rsquo;s Riddles &rsaquo; Storage &rsaquo; <strong>Clear data</strong>, or uninstall the App.</li>
         <li>
